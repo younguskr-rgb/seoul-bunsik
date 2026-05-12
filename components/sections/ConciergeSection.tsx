@@ -7,7 +7,7 @@ import { SectionHeader } from './SectionHeader';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AllergyBadges } from '@/components/menu/AllergyBadges';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { snacks, type Snack, type SnackRegion } from '@/data/snacks';
 import { cn } from '@/lib/utils';
 
@@ -56,15 +56,11 @@ export function ConciergeSection() {
           </TabsList>
         </Tabs>
 
-        {TABS.map((tabItem) => (
-          <TabsContent key={tabItem.value} value={tabItem.value}>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {filtered.map((snack) => (
-                <SnackCard key={snack.id} snack={snack} />
-              ))}
-            </div>
-          </TabsContent>
-        ))}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filtered.map((snack) => (
+            <SnackCard key={snack.id} snack={snack} />
+          ))}
+        </div>
       </div>
     </section>
   );

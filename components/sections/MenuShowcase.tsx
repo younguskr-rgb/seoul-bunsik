@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { AlertTriangle } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { MenuCard } from '@/components/menu/MenuCard';
 import { MenuFilterTags } from '@/components/menu/MenuFilterTags';
@@ -42,6 +43,14 @@ export function MenuShowcase() {
             ))}
           </div>
         )}
+
+        <div className="mt-10 flex items-start gap-3 rounded-2xl border border-dahong/30 bg-dahong/5 px-4 py-3 text-sm text-fg sm:items-center sm:justify-center sm:text-center">
+          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-dahong sm:mt-0" />
+          <div>
+            <span className="font-semibold">{t('allergyNotice.title')}</span>{' '}
+            <span className="text-muted-fg">{t('allergyNotice.body')}</span>
+          </div>
+        </div>
       </div>
     </section>
   );

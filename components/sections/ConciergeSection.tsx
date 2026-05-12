@@ -1,398 +1,129 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, RotateCcw, ShoppingBag, Sparkles } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import { ShieldCheck, Sparkles } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
-import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { MenuCard } from '@/components/menu/MenuCard';
-import { toast } from '@/components/ui/toaster';
-import { recommend, filterByTags, ALLERGEN_OPTIONS } from '@/lib/concierge/recommend';
-import type {
-  Allergen,
-  DietTag,
-  Mood,
-  Party,
-  Recommendation,
-  Style
-} from '@/lib/types';
+import { Badge } from '@/components/ui/badge';
+import { AllergyBadges } from '@/components/menu/AllergyBadges';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { snacks, type Snack, type SnackRegion } from '@/data/snacks';
 import { cn } from '@/lib/utils';
 
-const FILTERS: DietTag[] = ['healthy', 'spicy', 'kid-friendly', 'first-timer', 'hearty', 'sweet', 'vegetarian'];
-const MOODS: Mood[] = ['stress-relief', 'hearty', 'light', 'sweet', 'adventurous'];
-const PARTIES: Party[] = ['solo', 'duo', 'group'];
-const STYLES: Style[] = ['healthy', 'flavor', 'balanced'];
+type TabValue = 'all' | SnackRegion;
 
-const MOOD_EMOJI: Record<Mood, string> = {
-  'stress-relief': '🔥',
-  hearty: '🍱',
-  light: '🌿',
-  sweet: '🍰',
-  adventurous: '✨'
-};
-const STYLE_EMOJI: Record<Style, string> = {
-  healthy: '🥦',
-  flavor: '🤤',
-  balanced: '⚖️'
-};
+const TABS: { value: TabValue; emoji: string }[] = [
+  { value: 'all', emoji: '✨' },
+  { value: 'us', emoji: '🇺🇸' },
+  { value: 'kr', emoji: '🇰🇷' },
+  { value: 'world', emoji: '🌎' }
+];
 
 export function ConciergeSection() {
   const t = useTranslations('concierge');
+  const [tab, setTab] = useState<TabValue>('all');
+
+  const filtered = useMemo(
+    () => (tab === 'all' ? snacks : snacks.filter((s) => s.region === tab)),
+    [tab]
+  );
+
   return (
     <section id="concierge" className="section bg-muted/40">
       <div className="container-wide">
         <SectionHeader eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
-          <TagPanel />
-          <ChatPanel />
+
+        <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-dahong/30 bg-dahong/10 px-4 py-2 text-xs font-medium text-dahong">
+            <ShieldCheck className="h-4 w-4" />
+            <span>{t('momBadge')}</span>
+          </div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs text-muted-fg">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>{t('count', { count: snacks.length })}</span>
+          </div>
         </div>
+
+        <Tabs value={tab} onValueChange={(v) => setTab(v as TabValue)} className="mb-8 flex justify-center">
+          <TabsList>
+            {TABS.map((tabItem) => (
+              <TabsTrigger key={tabItem.value} value={tabItem.value}>
+                <span className="mr-1.5">{tabItem.emoji}</span>
+                {t(`tab.${tabItem.value}`)}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </Tabs>
+
+        {TABS.map((tabItem) => (
+          <TabsContent key={tabItem.value} value={tabItem.value}>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {filtered.map((snack) => (
+                <SnackCard key={snack.id} snack={snack} />
+              ))}
+            </div>
+          </TabsContent>
+        ))}
       </div>
     </section>
   );
 }
 
-function TagPanel() {
-  const t = useTranslations('concierge');
-  const tMenu = useTranslations('menu');
-  const [active, setActive] = useState<DietTag[]>(['healthy']);
-  const results = useMemo(() => filterByTags(active).slice(0, 3), [active]);
-
-  return (
-    <Card className="p-5 md:p-6">
-      <div className="mb-3 flex items-center gap-2">
-        <Sparkles className="h-4 w-4 text-dahong" />
-        <h3 className="font-serif text-xl">{t('tab.tags')}</h3>
-      </div>
-      <div className="mb-4 flex flex-wrap gap-2">
-        {FILTERS.map((tag) => {
-          const on = active.includes(tag);
-          return (
-            <button
-              key={tag}
-              type="button"
-              aria-pressed={on}
-              onClick={() =>
-                setActive((p) => (p.includes(tag) ? p.filter((x) => x !== tag) : [...p, tag]))
-              }
-              className={cn(
-                'rounded-full border px-3 py-1.5 text-xs font-medium transition',
-                on
-                  ? 'border-dahong bg-dahong text-white'
-                  : 'border-border bg-card text-muted-fg hover:text-fg'
-              )}
-            >
-              {tMenu(`filter.${tag}`)}
-            </button>
-          );
-        })}
-      </div>
-      {results.length === 0 ? (
-        <p className="py-8 text-center text-sm text-muted-fg">{tMenu('filter.empty')}</p>
-      ) : (
-        <div className="grid gap-3 sm:grid-cols-3">
-          {results.map((item) => (
-            <MenuCard key={item.id} item={item} compact />
-          ))}
-        </div>
-      )}
-    </Card>
-  );
-}
-
-function ChatPanel() {
-  const t = useTranslations('concierge');
-  return (
-    <Card className="p-5 md:p-6">
-      <div className="mb-3 flex items-center gap-2">
-        <span aria-hidden className="text-xl">🤖</span>
-        <h3 className="font-serif text-xl">{t('tab.chat')}</h3>
-      </div>
-      <ConciergeChat />
-    </Card>
-  );
-}
-
-type Step = 'spice' | 'allergy' | 'party' | 'style' | 'mood' | 'result';
-const STEPS: Step[] = ['spice', 'allergy', 'party', 'style', 'mood'];
-
-function ConciergeChat() {
-  const t = useTranslations('concierge');
+function SnackCard({ snack }: { snack: Snack }) {
   const locale = useLocale() as 'ko' | 'en';
-  const [step, setStep] = useState<Step>('spice');
-  const [spiceMax, setSpiceMax] = useState<0 | 1 | 2 | 3 | 4 | 5>(3);
-  const [allergies, setAllergies] = useState<Allergen[]>([]);
-  const [party, setParty] = useState<Party>('duo');
-  const [style, setStyle] = useState<Style>('balanced');
-  const [mood, setMood] = useState<Mood>('hearty');
-  const [result, setResult] = useState<Recommendation | null>(null);
-
-  const stepIdx = STEPS.indexOf(step);
-
-  function next() {
-    if (step === 'mood') {
-      const rec = recommend({
-        spiceMax,
-        excludeAllergens: allergies,
-        mood,
-        party,
-        style
-      });
-      setResult(rec);
-      setStep('result');
-    } else {
-      setStep(STEPS[stepIdx + 1]);
-    }
-  }
-  function back() {
-    if (step === 'result') {
-      setStep('mood');
-      setResult(null);
-    } else if (stepIdx > 0) {
-      setStep(STEPS[stepIdx - 1]);
-    }
-  }
-  function restart() {
-    setStep('spice');
-    setResult(null);
-  }
+  const t = useTranslations('concierge');
+  const [from, to] = snack.imageGradient;
 
   return (
-    <div>
-      {step !== 'result' && (
-        <div
-          className="mb-4 flex items-center gap-2 text-xs text-muted-fg"
-          aria-live="polite"
-        >
-          <span className="font-semibold uppercase tracking-wide">
-            {t('chat.step')} {stepIdx + 1} {t('chat.of')} {STEPS.length}
+    <Card className="group flex h-full flex-col overflow-hidden hover:shadow-md focus-within:shadow-md">
+      <div
+        className="relative flex h-32 items-center justify-center rounded-b-none"
+        style={{ background: `linear-gradient(135deg, ${from}, ${to})` }}
+        aria-hidden
+      >
+        <span className="text-5xl drop-shadow-md transition-transform duration-300 group-hover:scale-110">
+          {snack.emoji}
+        </span>
+        <span className="absolute left-3 top-3 rounded-full bg-bg/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-fg backdrop-blur">
+          {t(`region.${snack.region}`)}
+        </span>
+        {snack.popular && (
+          <span className="absolute right-3 top-3">
+            <Badge variant="primary">{t('popular')}</Badge>
           </span>
-          <div className="flex-1 h-1 rounded-full bg-muted">
-            <div
-              className="h-full rounded-full bg-dahong transition-all"
-              style={{ width: `${((stepIdx + 1) / STEPS.length) * 100}%` }}
-            />
+        )}
+      </div>
+
+      <div className="flex flex-1 flex-col gap-2 p-4">
+        <div>
+          <div className="font-serif text-lg leading-tight">{snack.name[locale]}</div>
+          <div className="mt-0.5 text-xs text-muted-fg">
+            {snack.brand[locale]} · {snack.origin[locale]}
           </div>
         </div>
-      )}
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={step}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -8 }}
-          transition={{ duration: 0.25 }}
+        <p className="text-sm text-muted-fg line-clamp-2">{snack.shortDesc[locale]}</p>
+
+        <div
+          className={cn(
+            'mt-1 rounded-xl border border-dahong/30 bg-dahong/5 p-2.5',
+            'text-xs leading-relaxed text-fg'
+          )}
         >
-          {step === 'spice' && (
-            <StepWrap title={t('step1.title')}>
-              <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
-                {[0, 1, 2, 3, 4, 5].map((n) => (
-                  <button
-                    key={n}
-                    type="button"
-                    onClick={() => setSpiceMax(n as 0 | 1 | 2 | 3 | 4 | 5)}
-                    aria-pressed={spiceMax === n}
-                    className={cn(
-                      'rounded-2xl border px-3 py-3 text-sm transition flex flex-col items-center gap-1',
-                      spiceMax === n
-                        ? 'border-dahong bg-dahong/10 text-dahong'
-                        : 'border-border bg-card text-muted-fg hover:text-fg'
-                    )}
-                  >
-                    <span aria-hidden className="text-xl">
-                      {['😶', '🙂', '😋', '🌶️', '🔥', '💥'][n]}
-                    </span>
-                    <span className="text-[11px] font-medium">{t(`spice.${n}`)}</span>
-                  </button>
-                ))}
-              </div>
-            </StepWrap>
-          )}
-
-          {step === 'allergy' && (
-            <StepWrap title={t('step2.title')} subtitle={t('step2.subtitle')}>
-              <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-                {ALLERGEN_OPTIONS.map((a) => {
-                  const on = allergies.includes(a);
-                  return (
-                    <button
-                      key={a}
-                      type="button"
-                      aria-pressed={on}
-                      onClick={() =>
-                        setAllergies((prev) =>
-                          prev.includes(a) ? prev.filter((x) => x !== a) : [...prev, a]
-                        )
-                      }
-                      className={cn(
-                        'rounded-xl border px-3 py-2 text-sm transition',
-                        on
-                          ? 'border-dahong bg-dahong/10 text-dahong'
-                          : 'border-border bg-card text-muted-fg hover:text-fg'
-                      )}
-                    >
-                      <AllergyLabel a={a} />
-                    </button>
-                  );
-                })}
-              </div>
-            </StepWrap>
-          )}
-
-          {step === 'party' && (
-            <StepWrap title={t('step3.title')}>
-              <div className="grid grid-cols-3 gap-2">
-                {PARTIES.map((p) => (
-                  <button
-                    key={p}
-                    type="button"
-                    aria-pressed={party === p}
-                    onClick={() => setParty(p)}
-                    className={cn(
-                      'rounded-2xl border px-3 py-4 text-sm transition flex flex-col items-center gap-2',
-                      party === p
-                        ? 'border-dahong bg-dahong/10 text-dahong'
-                        : 'border-border bg-card text-muted-fg hover:text-fg'
-                    )}
-                  >
-                    <span aria-hidden className="text-2xl">
-                      {p === 'solo' ? '🧍' : p === 'duo' ? '👯' : '👨‍👩‍👧'}
-                    </span>
-                    <span className="font-medium">{t(`party.${p}`)}</span>
-                  </button>
-                ))}
-              </div>
-            </StepWrap>
-          )}
-
-          {step === 'style' && (
-            <StepWrap title={t('step4.title')} subtitle={t('step4.subtitle')}>
-              <div className="grid grid-cols-3 gap-2">
-                {STYLES.map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    aria-pressed={style === s}
-                    onClick={() => setStyle(s)}
-                    className={cn(
-                      'rounded-2xl border px-3 py-4 text-sm transition flex flex-col items-center gap-2',
-                      style === s
-                        ? 'border-dahong bg-dahong/10 text-dahong'
-                        : 'border-border bg-card text-muted-fg hover:text-fg'
-                    )}
-                  >
-                    <span aria-hidden className="text-2xl">{STYLE_EMOJI[s]}</span>
-                    <span className="text-xs font-medium">{t(`style.${s}`)}</span>
-                  </button>
-                ))}
-              </div>
-            </StepWrap>
-          )}
-
-          {step === 'mood' && (
-            <StepWrap title={t('step6.title')}>
-              <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
-                {MOODS.map((m) => (
-                  <button
-                    key={m}
-                    type="button"
-                    aria-pressed={mood === m}
-                    onClick={() => setMood(m)}
-                    className={cn(
-                      'rounded-2xl border px-3 py-4 text-sm transition flex flex-col items-center gap-1',
-                      mood === m
-                        ? 'border-dahong bg-dahong/10 text-dahong'
-                        : 'border-border bg-card text-muted-fg hover:text-fg'
-                    )}
-                  >
-                    <span aria-hidden className="text-2xl">{MOOD_EMOJI[m]}</span>
-                    <span className="text-[11px] font-medium">{t(`mood.${m}`)}</span>
-                  </button>
-                ))}
-              </div>
-            </StepWrap>
-          )}
-
-          {step === 'result' && result && (
-            <div className="space-y-4">
-              <div className="rounded-2xl bg-dahong/10 px-4 py-3 text-sm text-dahong">
-                <div className="text-xs font-semibold uppercase tracking-wide opacity-80">
-                  {t('result.title')}
-                </div>
-                <div className="mt-1">{result.rationale[locale]}</div>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-1">
-                <ResultSlot label={t('result.main')} item={result.main} />
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <Button onClick={() => toast(t('chat.cartAdded'))}>
-                  <ShoppingBag className="h-4 w-4" />
-                  {t('chat.addToCart')}
-                </Button>
-                <Button variant="outline" onClick={restart}>
-                  <RotateCcw className="h-4 w-4" />
-                  {t('chat.restart')}
-                </Button>
-              </div>
-            </div>
-          )}
-        </motion.div>
-      </AnimatePresence>
-
-      {step !== 'result' && (
-        <div className="mt-4 flex items-center justify-between gap-2">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={back}
-            disabled={stepIdx === 0}
-            className="disabled:opacity-30"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            {t('chat.back')}
-          </Button>
-          <Button onClick={next} size="sm">
-            {t('chat.next')}
-            <ArrowRight className="h-4 w-4" />
-          </Button>
+          <div className="mb-0.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-dahong">
+            <ShieldCheck className="h-3 w-3" />
+            {t('momCheck')}
+          </div>
+          <div>{snack.momPick[locale]}</div>
         </div>
-      )}
-    </div>
-  );
-}
 
-function StepWrap({
-  title,
-  subtitle,
-  children
-}: {
-  title: string;
-  subtitle?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div>
-      <h4 className="mb-1 font-serif text-lg">{title}</h4>
-      {subtitle && <p className="mb-3 text-xs text-muted-fg">{subtitle}</p>}
-      <div className="mt-3">{children}</div>
-    </div>
-  );
-}
-
-function AllergyLabel({ a }: { a: Allergen }) {
-  const t = useTranslations('menu');
-  return <>{t(`allergen.${a}`)}</>;
-}
-
-function ResultSlot({ label, item }: { label: string; item: Recommendation['main'] }) {
-  return (
-    <div>
-      <div className="mb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-fg">
-        {label}
+        {snack.allergens.length > 0 && (
+          <div className="mt-auto pt-1">
+            <AllergyBadges allergens={snack.allergens} />
+          </div>
+        )}
       </div>
-      <MenuCard item={item} compact />
-    </div>
+    </Card>
   );
 }

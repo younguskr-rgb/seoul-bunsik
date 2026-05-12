@@ -6,10 +6,10 @@ export const menu: MenuItem[] = [
     id: 'doeji-mandu',
     slug: 'doeji-mandu',
     category: 'street-food',
-    name: { ko: '돼지 만두', en: 'Pork Mandu' },
+    name: { ko: '돼지만두', en: 'Doeji Mandu' },
     shortDesc: {
-      ko: '돼지고기·배추·부추·당면 (10개)',
-      en: 'Pork dumplings with cabbage, chives & glass noodle (10 pcs)'
+      ko: '돼지고기 만두 (10개) — 돼지고기·배추·부추·당면·생강',
+      en: 'Pork dumpling (10 pcs) — ground pork, chinese cabbage, chives, sweet potato noodle, ginger'
     },
     priceUSD: 13.99,
     spiceLevel: 0,
@@ -23,10 +23,10 @@ export const menu: MenuItem[] = [
     id: 'bulgogi-mandu',
     slug: 'bulgogi-mandu',
     category: 'street-food',
-    name: { ko: '불고기 만두', en: 'Bulgogi Mandu' },
+    name: { ko: '불고기만두', en: 'Bulgogi Mandu' },
     shortDesc: {
-      ko: '불고기·양배추·당근·당면 (10개)',
-      en: 'Beef bulgogi dumplings with cabbage, carrot & glass noodle (10 pcs)'
+      ko: '소고기 만두 (10개) — 다진 소고기·양배추·대파·당근·당면·마늘',
+      en: 'Beef dumpling (10 pcs) — ground beef, cabbage, spring onion, carrot, sweet potato noodle, garlic'
     },
     priceUSD: 14.99,
     spiceLevel: 0,
@@ -41,10 +41,10 @@ export const menu: MenuItem[] = [
     id: 'daggogi-mandu',
     slug: 'daggogi-mandu',
     category: 'street-food',
-    name: { ko: '닭고기 만두', en: 'Chicken Mandu' },
+    name: { ko: '닭고기만두', en: 'Daggogi Mandu' },
     shortDesc: {
-      ko: '닭고기·배추·부추·당근 (10개)',
-      en: 'Chicken dumplings with cabbage, chives & carrot (10 pcs)'
+      ko: '닭고기 만두 (10개) — 다진 닭고기·배추·부추·당근·당면·생강·마늘',
+      en: 'Chicken dumpling (10 pcs) — ground chicken, chinese cabbage, chive, carrot, sweet potato noodle, ginger, garlic'
     },
     priceUSD: 13.99,
     spiceLevel: 0,
@@ -58,10 +58,10 @@ export const menu: MenuItem[] = [
     id: 'kimchi-mandu',
     slug: 'kimchi-mandu',
     category: 'street-food',
-    name: { ko: '김치 만두', en: 'Kimchi Mandu' },
+    name: { ko: '김치만두', en: 'Kimchi Mandu' },
     shortDesc: {
-      ko: '김치·돼지고기·당면 (10개)',
-      en: 'Kimchi & pork dumplings with glass noodle (10 pcs)'
+      ko: '김치 만두 (10개) — 김치·다진 돼지고기·당면',
+      en: 'Kimchi dumpling (10 pcs) — kimchi, ground pork, sweet potato noodle'
     },
     priceUSD: 13.99,
     spiceLevel: 2,
@@ -77,10 +77,10 @@ export const menu: MenuItem[] = [
     id: 'bulgogi',
     slug: 'bulgogi',
     category: 'street-food',
-    name: { ko: '불고기', en: 'Beef Bulgogi' },
+    name: { ko: '불고기', en: 'Bulgogi' },
     shortDesc: {
-      ko: '한국 전통 양념 소고기 덮밥 (양파·당근·버섯·마늘·배)',
-      en: 'Korean marinated beef over rice with onion, carrot, mushroom, garlic & pear'
+      ko: '한국 전통 양념 소고기 + 밥 — 소고기·양파·당근·버섯·마늘·배·불고기 소스',
+      en: 'Korean traditional marinade beef w/ rice — beef, onion, carrot, mushroom, garlic, pear with bulgogi sauce'
     },
     priceUSD: 22.99,
     spiceLevel: 0,
@@ -95,10 +95,10 @@ export const menu: MenuItem[] = [
     id: 'doeji-bulgogi',
     slug: 'doeji-bulgogi',
     category: 'street-food',
-    name: { ko: '돼지 불고기', en: 'Pork Bulgogi' },
+    name: { ko: '돼지불고기', en: 'Doeji Bulgogi' },
     shortDesc: {
-      ko: '한국 전통 양념 돼지고기 덮밥 (양파·당근·버섯·마늘·배)',
-      en: 'Korean marinated pork over rice with onion, carrot, mushroom, garlic & pear'
+      ko: '한국 전통 양념 돼지고기 + 밥 — 돼지고기·양파·당근·버섯·마늘·배·불고기 소스',
+      en: 'Korean traditional marinade pork w/ rice — pork, onion, carrot, mushroom, garlic, pear with bulgogi sauce'
     },
     priceUSD: 20.99,
     spiceLevel: 1,
@@ -112,10 +112,10 @@ export const menu: MenuItem[] = [
     id: 'dag-bulgogi',
     slug: 'dag-bulgogi',
     category: 'street-food',
-    name: { ko: '닭 불고기', en: 'Chicken Bulgogi' },
+    name: { ko: '닭불고기', en: 'Dag Bulgogi' },
     shortDesc: {
-      ko: '한국 전통 양념 닭고기 덮밥 (양파·당근·버섯·마늘·배)',
-      en: 'Korean marinated chicken over rice with onion, carrot, mushroom, garlic & pear'
+      ko: '한국 전통 양념 닭고기 + 밥 — 닭고기·양파·당근·버섯·마늘·배·불고기 소스',
+      en: 'Korean traditional marinade chicken w/ rice — chicken, onion, carrot, mushroom, garlic, pear with bulgogi sauce'
     },
     priceUSD: 20.99,
     spiceLevel: 1,
@@ -129,10 +129,10 @@ export const menu: MenuItem[] = [
     id: 'jeyukbokkeum',
     slug: 'jeyukbokkeum',
     category: 'street-food',
-    name: { ko: '제육볶음', en: 'Spicy Stir-fried Pork' },
+    name: { ko: '제육볶음', en: 'Jeyukbbokeum' },
     shortDesc: {
-      ko: '매콤한 돼지(또는 닭) 볶음 (양파·당근·양배추·마늘)',
-      en: 'Spicy stir-fried pork or chicken with onion, carrot, cabbage & garlic'
+      ko: '매콤 돼지 또는 닭 볶음 + 밥 — 고기·양파·당근·양배추·마늘·대파',
+      en: 'Spicy pork or chicken w/ rice — meat, onion, carrot, cabbage, garlic, spring onion'
     },
     priceUSD: 19.99,
     spiceLevel: 4,
@@ -146,10 +146,10 @@ export const menu: MenuItem[] = [
     id: 'ojingo-bokkeum',
     slug: 'ojingo-bokkeum',
     category: 'street-food',
-    name: { ko: '오징어 볶음', en: 'Spicy Squid Stir-fry' },
+    name: { ko: '오징어볶음', en: 'Ojingo Bbokeum' },
     shortDesc: {
-      ko: '매콤한 오징어 볶음 (양파·당근·애호박·마늘·고추장)',
-      en: 'Spicy squid with onion, carrot, zucchini, garlic & chili paste'
+      ko: '매콤 오징어 볶음 + 밥 — 오징어·양파·당근·애호박·마늘·고추장·대파',
+      en: 'Spicy squid w/ rice — squid, onion, carrot, zucchini, garlic, chili paste, spring onion'
     },
     priceUSD: 20.99,
     spiceLevel: 4,
@@ -163,10 +163,10 @@ export const menu: MenuItem[] = [
     id: 'osam-bulgogi',
     slug: 'osam-bulgogi',
     category: 'street-food',
-    name: { ko: '오삼 불고기', en: 'Spicy Squid & Pork' },
+    name: { ko: '오삼불고기', en: 'Osam Bulgogi' },
     shortDesc: {
-      ko: '오징어 + 돼지고기 매콤 볶음 (양파·당근·애호박·고추장)',
-      en: 'Spicy squid & pork stir-fry with onion, carrot, zucchini & chili paste'
+      ko: '매콤 오징어 + 돼지고기 볶음 + 밥 — 오징어·돼지고기·양파·당근·애호박·마늘·고추장·대파',
+      en: 'Spicy squid & pork w/ rice — squid, pork, onion, carrot, zucchini, garlic, chili paste, spring onion'
     },
     priceUSD: 19.99,
     spiceLevel: 4,
@@ -182,10 +182,10 @@ export const menu: MenuItem[] = [
     id: 'kimchi-bokkeumbap',
     slug: 'kimchi-bokkeumbap',
     category: 'street-food',
-    name: { ko: '김치 볶음밥', en: 'Kimchi Fried Rice' },
+    name: { ko: '김치볶음밥', en: 'Kimchi Bokeumbab' },
     shortDesc: {
-      ko: '김치 볶음밥 + 고기(소/돼지/닭) + 계란 후라이',
-      en: 'Kimchi fried rice with choice of meat & a fried egg on top'
+      ko: '김치 볶음밥 — 김치·고기 택1(소·돼지·닭)·후라이드 에그·매콤 소스',
+      en: 'Kimchi fried rice w/ meat (choice of beef, pork, or chicken), fried egg & spicy sauce'
     },
     priceUSD: 15.99,
     spiceLevel: 3,
@@ -197,13 +197,81 @@ export const menu: MenuItem[] = [
     popular: true
   },
   {
+    id: 'kimchi-jjigae',
+    slug: 'kimchi-jjigae',
+    category: 'street-food',
+    name: { ko: '김치찌개', en: 'Kimchi Jjigae' },
+    shortDesc: {
+      ko: '김치찌개 + 밥 — 김치·고기 택1(소·돼지·닭)·두부·햄·고추·대파',
+      en: 'Kimchi soup w/ meat (choice of beef, pork, or chicken) w/ rice — kimchi, meat, tofu, ham, pepper, spring onion'
+    },
+    priceUSD: 15.99,
+    spiceLevel: 3,
+    allergens: ['pork', 'soy'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🍲',
+    imageGradient: ['#D1543A', '#7A1F14']
+  },
+  {
+    id: 'budae-jjigae',
+    slug: 'budae-jjigae',
+    category: 'street-food',
+    name: { ko: '부대찌개', en: 'Budae Jjigae' },
+    shortDesc: {
+      ko: '매콤 부대찌개 + 밥 — 배추·돼지고기·소시지·라면·두부·햄·대파·당면',
+      en: 'Spicy meat soup w/ rice — chinese cabbage, pork, sausage, ramen, tofu, ham, spring onion, sweet potato noodle'
+    },
+    priceUSD: 19.99,
+    spiceLevel: 3,
+    allergens: ['pork', 'gluten', 'soy'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🍲',
+    imageGradient: ['#D6553A', '#5E1A10']
+  },
+  {
+    id: 'haemul-buchujeon',
+    slug: 'haemul-buchujeon',
+    category: 'street-food',
+    name: { ko: '해물부추전', en: 'Haemul Buchujeon' },
+    shortDesc: {
+      ko: '한국식 해물 부추전 — 전 믹스·계란·부추·새우·애호박·당근',
+      en: 'Korean style seafood pancake — pancake mix, egg, chive, shrimp, squash, carrot'
+    },
+    priceUSD: 15.99,
+    spiceLevel: 0,
+    allergens: ['shellfish', 'gluten', 'egg'],
+    dietTags: ['hearty', 'first-timer'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'mood:light', 'party:duo', 'party:group'],
+    emoji: '🥞',
+    imageGradient: ['#E8B26A', '#8A5A1E']
+  },
+  {
+    id: 'kimchi-buchujeon',
+    slug: 'kimchi-buchujeon',
+    category: 'street-food',
+    name: { ko: '김치부추전', en: 'Kimchi Buchujeon' },
+    shortDesc: {
+      ko: '한국식 김치 부추전 — 전 믹스·김치·부추·애호박·양파',
+      en: 'Korean style kimchi pancake — pancake mix, kimchi, chive, squash, onion'
+    },
+    priceUSD: 15.99,
+    spiceLevel: 2,
+    allergens: ['gluten', 'egg'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🥞',
+    imageGradient: ['#E07A4A', '#7A2818']
+  },
+  {
     id: 'jabchaebap',
     slug: 'jabchaebap',
     category: 'street-food',
-    name: { ko: '잡채밥', en: 'Japchae over Rice' },
+    name: { ko: '잡채밥', en: 'Jabchebab' },
     shortDesc: {
-      ko: '당면 잡채 + 밥 (소고기·시금치·당근·버섯·계란)',
-      en: 'Glass noodle japchae over rice with beef, spinach, carrot, mushroom & egg'
+      ko: '잡채 + 밥 — 당면·소고기·시금치·당근·버섯·계란',
+      en: 'Jabche w/ rice — sweet potato noodle, beef, spinach, carrot, mushroom, egg'
     },
     priceUSD: 16.99,
     spiceLevel: 0,
@@ -214,48 +282,30 @@ export const menu: MenuItem[] = [
     imageGradient: ['#C3A56A', '#6B4A1E']
   },
   {
-    id: 'bibimbap',
-    slug: 'bibimbap',
+    id: 'sundubu-jjigae',
+    slug: 'sundubu-jjigae',
     category: 'street-food',
-    name: { ko: '비빔밥', en: 'Bibimbap' },
+    name: { ko: '순두부찌개', en: 'SundubuJjigae' },
     shortDesc: {
-      ko: '소고기 + 시금치·당근·무·콩나물·버섯·계란 (매콤 양념)',
-      en: 'Beef & vegetables over rice with spicy sauce & egg'
+      ko: '순두부찌개 + 밥 — 순두부·돼지고기·애호박·조개·오징어·계란',
+      en: 'Soft tofu soup w/ rice — soft tofu, pork, squash, clam, squid, egg'
     },
-    priceUSD: 15.99,
-    spiceLevel: 2,
-    allergens: ['beef', 'egg', 'soy', 'sesame'],
-    dietTags: ['hearty', 'healthy', 'first-timer'],
-    conciergeTags: ['hearty', 'healthy', 'first-timer', 'mood:hearty', 'mood:light', 'party:solo', 'party:duo'],
+    priceUSD: 16.99,
+    spiceLevel: 3,
+    allergens: ['pork', 'shellfish', 'soy', 'egg'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:hearty', 'mood:stress-relief', 'party:solo', 'party:duo'],
     emoji: '🍲',
-    imageGradient: ['#E89A4A', '#7A3A14'],
-    popular: true
-  },
-  {
-    id: 'dolsot-bibimbap',
-    slug: 'dolsot-bibimbap',
-    category: 'street-food',
-    name: { ko: '돌솥 비빔밥', en: 'Stone-pot Bibimbap' },
-    shortDesc: {
-      ko: '뜨거운 돌솥 비빔밥 (소고기·시금치·당근·무·콩나물·버섯·계란)',
-      en: 'Sizzling stone-pot bibimbap with beef, vegetables & egg'
-    },
-    priceUSD: 17.99,
-    spiceLevel: 2,
-    allergens: ['beef', 'egg', 'soy', 'sesame'],
-    dietTags: ['hearty', 'healthy', 'first-timer'],
-    conciergeTags: ['hearty', 'healthy', 'first-timer', 'mood:hearty', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🥘',
-    imageGradient: ['#D88A3E', '#5A2E10']
+    imageGradient: ['#E26A4A', '#6E1F14']
   },
   {
     id: 'tteokbokki',
     slug: 'tteokbokki',
     category: 'street-food',
-    name: { ko: '떡볶이', en: 'Tteokbokki' },
+    name: { ko: '떡볶이', en: 'Ddeokbokki' },
     shortDesc: {
-      ko: '매콤달콤 떡볶이 (어묵·양배추·양파·당근·라면)',
-      en: 'Sweet & spicy rice cakes with fish cake, cabbage & ramen'
+      ko: '매콤 양념 떡볶이 — 떡·어묵·양배추·양파·당근·라면',
+      en: 'Rice cake with vegetable & spicy sauce — rice cake, fish cake, cabbage, onion, carrot, ramen'
     },
     priceUSD: 13.99,
     spiceLevel: 3,
@@ -272,8 +322,8 @@ export const menu: MenuItem[] = [
     category: 'street-food',
     name: { ko: '짜장면', en: 'Jjajangmyeon' },
     shortDesc: {
-      ko: '춘장 소스 면 (돼지고기·양파·양배추·오이)',
-      en: 'Noodles in black bean sauce with pork, onion, cabbage & cucumber'
+      ko: '춘장 소스 면 — 면·돼지고기·양파·양배추·오이·춘장',
+      en: 'Blackbean sauce noodle — noodle, pork, onion, cabbage, cucumber, blackbean paste'
     },
     priceUSD: 13.99,
     spiceLevel: 0,
@@ -287,10 +337,10 @@ export const menu: MenuItem[] = [
     id: 'jjamppong',
     slug: 'jjamppong',
     category: 'street-food',
-    name: { ko: '짬뽕', en: 'Jjamppong' },
+    name: { ko: '짬뽕', en: 'Jjambbong' },
     shortDesc: {
-      ko: '매콤 해물 짬뽕 (새우·오징어·홍합·양배추·애호박)',
-      en: 'Spicy seafood noodle soup with shrimp, squid, mussels & veggies'
+      ko: '매콤 해물 짬뽕 — 새우·오징어·홍합·양파·애호박·양배추·당근·버섯·고추·대파',
+      en: 'Seafood noodle soup — shrimp, squid, mussel, onion, squash, cabbage, carrot, mushroom, pepper, green onion'
     },
     priceUSD: 16.99,
     spiceLevel: 4,
@@ -300,94 +350,40 @@ export const menu: MenuItem[] = [
     emoji: '🍜',
     imageGradient: ['#E25A3A', '#6B1A0F']
   },
-
-  // ── 찌개 ───────────────────────────────────────────────────────────────
   {
-    id: 'kimchi-jjigae',
-    slug: 'kimchi-jjigae',
+    id: 'bibimbap',
+    slug: 'bibimbap',
     category: 'street-food',
-    name: { ko: '김치찌개', en: 'Kimchi Stew' },
+    name: { ko: '비빔밥', en: 'Bibimbab' },
     shortDesc: {
-      ko: '푹 익은 김치찌개 + 밥 (고기 선택·두부·햄·파)',
-      en: 'Hearty kimchi stew with choice of meat, tofu, ham & rice'
-    },
-    priceUSD: 15.99,
-    spiceLevel: 3,
-    allergens: ['pork', 'soy'],
-    dietTags: ['hearty', 'spicy'],
-    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo', 'party:duo'],
-    emoji: '🍲',
-    imageGradient: ['#D1543A', '#7A1F14']
-  },
-  {
-    id: 'sundubu-jjigae',
-    slug: 'sundubu-jjigae',
-    category: 'street-food',
-    name: { ko: '순두부찌개', en: 'Soft Tofu Stew' },
-    shortDesc: {
-      ko: '순두부·돼지고기·애호박·조개·오징어·계란 + 밥',
-      en: 'Soft tofu stew with pork, clam, squid, zucchini & egg over rice'
-    },
-    priceUSD: 16.99,
-    spiceLevel: 3,
-    allergens: ['pork', 'shellfish', 'soy', 'egg'],
-    dietTags: ['hearty', 'spicy'],
-    conciergeTags: ['hearty', 'spicy', 'mood:hearty', 'mood:stress-relief', 'party:solo', 'party:duo'],
-    emoji: '🍲',
-    imageGradient: ['#E26A4A', '#6E1F14']
-  },
-  {
-    id: 'budae-jjigae',
-    slug: 'budae-jjigae',
-    category: 'street-food',
-    name: { ko: '부대찌개', en: 'Army Base Stew' },
-    shortDesc: {
-      ko: '햄·소시지·라면·두부·당면·양배추 매콤 찌개 + 밥',
-      en: 'Spicy stew with ham, sausage, ramen, tofu & glass noodle, with rice'
-    },
-    priceUSD: 19.99,
-    spiceLevel: 3,
-    allergens: ['pork', 'gluten', 'soy'],
-    dietTags: ['hearty', 'spicy'],
-    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:duo', 'party:group'],
-    emoji: '🍲',
-    imageGradient: ['#D6553A', '#5E1A10']
-  },
-
-  // ── 전 ─────────────────────────────────────────────────────────────────
-  {
-    id: 'haemul-buchujeon',
-    slug: 'haemul-buchujeon',
-    category: 'street-food',
-    name: { ko: '해물 부추전', en: 'Seafood Pancake' },
-    shortDesc: {
-      ko: '한국식 해물 부추전 (새우·애호박·당근·계란)',
-      en: 'Korean seafood scallion pancake with shrimp, zucchini, carrot & egg'
-    },
-    priceUSD: 15.99,
-    spiceLevel: 0,
-    allergens: ['shellfish', 'gluten', 'egg'],
-    dietTags: ['hearty', 'first-timer'],
-    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'mood:light', 'party:duo', 'party:group'],
-    emoji: '🥞',
-    imageGradient: ['#E8B26A', '#8A5A1E']
-  },
-  {
-    id: 'kimchi-buchujeon',
-    slug: 'kimchi-buchujeon',
-    category: 'street-food',
-    name: { ko: '김치 부추전', en: 'Kimchi Pancake' },
-    shortDesc: {
-      ko: '매콤한 김치 부추전 (양파·애호박)',
-      en: 'Kimchi & chive pancake with onion and zucchini'
+      ko: '소고기 + 야채 + 밥 — 시금치·당근·무·콩나물·버섯·계란·소고기·매콤 양념',
+      en: 'Beef & vegetables w/ rice — spinach, carrot, radish, bean sprouts, mushroom, egg, beef w/ spicy sauce'
     },
     priceUSD: 15.99,
     spiceLevel: 2,
-    allergens: ['gluten', 'egg'],
-    dietTags: ['hearty', 'spicy'],
-    conciergeTags: ['hearty', 'spicy', 'mood:hearty', 'party:duo', 'party:group'],
-    emoji: '🥞',
-    imageGradient: ['#E07A4A', '#7A2818']
+    allergens: ['beef', 'egg', 'soy', 'sesame'],
+    dietTags: ['hearty', 'healthy', 'first-timer'],
+    conciergeTags: ['hearty', 'healthy', 'first-timer', 'mood:hearty', 'mood:light', 'party:solo', 'party:duo'],
+    emoji: '🍲',
+    imageGradient: ['#E89A4A', '#7A3A14'],
+    popular: true
+  },
+  {
+    id: 'dolsot-bibimbap',
+    slug: 'dolsot-bibimbap',
+    category: 'street-food',
+    name: { ko: '돌솥비빔밥', en: 'Dolsot Bibimbab' },
+    shortDesc: {
+      ko: '뜨거운 돌솥 비빔밥 — 시금치·당근·무·콩나물·버섯·계란·소고기·매콤 양념',
+      en: 'Beef & vegetables w/ rice (stone-pot) — spinach, carrot, radish, bean sprouts, mushroom, egg, beef w/ spicy sauce'
+    },
+    priceUSD: 17.99,
+    spiceLevel: 2,
+    allergens: ['beef', 'egg', 'soy', 'sesame'],
+    dietTags: ['hearty', 'healthy', 'first-timer'],
+    conciergeTags: ['hearty', 'healthy', 'first-timer', 'mood:hearty', 'mood:light', 'party:solo', 'party:duo'],
+    emoji: '🥘',
+    imageGradient: ['#D88A3E', '#5A2E10']
   },
 
   // ── 갈비 / 탕수육 ──────────────────────────────────────────────────────
@@ -395,10 +391,10 @@ export const menu: MenuItem[] = [
     id: 'galbi',
     slug: 'galbi',
     category: 'street-food',
-    name: { ko: '소갈비', en: 'Beef Galbi' },
+    name: { ko: '갈비', en: 'Galbi' },
     shortDesc: {
-      ko: '한국식 양념 소갈비 구이 + 밥 (양파·당근·버섯·마늘·배)',
-      en: 'Korean-style marinated beef short ribs with rice & veggies'
+      ko: '한국식 양념 소갈비 + 밥 — 소갈비·양파·당근·버섯·마늘·배·대파·갈비 소스',
+      en: 'Korean style beef galbi w/ rice — beef galbi, onion, carrot, mushroom, garlic, pear, spring onion w/ korean galbi sauce'
     },
     priceUSD: 27.99,
     spiceLevel: 0,
@@ -413,10 +409,10 @@ export const menu: MenuItem[] = [
     id: 'doejigogi-tangsuyuk',
     slug: 'doejigogi-tangsuyuk',
     category: 'street-food',
-    name: { ko: '돼지고기 탕수육', en: 'Sweet & Sour Pork' },
+    name: { ko: '돼지고기 탕수육', en: 'Doejjigogi Tangsuyuk' },
     shortDesc: {
-      ko: '바삭 튀긴 돼지고기 + 새콤달콤 소스 (파인애플·피망·당근·양파·버섯)',
-      en: 'Crispy fried pork with sweet & sour sauce, pineapple, peppers & veggies'
+      ko: '바삭 튀긴 돼지고기 + 탕수육 소스 — 돼지고기·파인애플·피망·버섯·당근·양파·새콤달콤 소스',
+      en: 'Fried pork w/ tangsuyuk sauce — pork, pineapple, pepper, mushroom, carrot, onion w/ sweet and sour sauce'
     },
     priceUSD: 24.99,
     spiceLevel: 0,
@@ -430,10 +426,10 @@ export const menu: MenuItem[] = [
     id: 'dakgogi-tangsuyuk',
     slug: 'dakgogi-tangsuyuk',
     category: 'street-food',
-    name: { ko: '닭고기 탕수육', en: 'Sweet & Sour Chicken' },
+    name: { ko: '닭고기 탕수육', en: 'Dakgogi Tangsuyuk' },
     shortDesc: {
-      ko: '바삭 튀긴 닭고기 + 새콤달콤 소스 (파인애플·피망·당근·양파·버섯)',
-      en: 'Crispy fried chicken with sweet & sour sauce, pineapple, peppers & veggies'
+      ko: '바삭 튀긴 닭고기 + 탕수육 소스 — 닭고기·파인애플·피망·버섯·당근·양파·새콤달콤 소스',
+      en: 'Fried chicken w/ tangsuyuk sauce — chicken, pineapple, pepper, mushroom, carrot, onion w/ sweet and sour sauce'
     },
     priceUSD: 24.99,
     spiceLevel: 0,

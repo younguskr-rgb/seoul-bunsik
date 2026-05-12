@@ -10,7 +10,7 @@
     "comingSoon": "Coming Soon",
     "nav": {
       "menu": "Menu",
-      "concierge": "Concierge",
+      "concierge": "Mom's Picks",
       "membership": "Membership",
       "visit": "Visit"
     },
@@ -57,6 +57,10 @@
       "vegetarian": "Vegetarian",
       "clear": "Clear filters",
       "empty": "No items match. Try removing a filter."
+    },
+    "allergyNotice": {
+      "title": "Check our ingredients.",
+      "body": "Please inform us if you have a food allergy."
     },
     "badge": {
       "popular": "Popular",
@@ -105,62 +109,23 @@
     "comboCta": "Order the banchan platter"
   },
   "concierge": {
-    "eyebrow": "Personal Concierge",
-    "title": "What should I eat today?\nLet your bunsik butler decide.",
-    "subtitle": "Pick instantly with taste tags, or follow our 4-step chat guide.",
+    "eyebrow": "Curator's Picks",
+    "title": "Snacks & sips, hand-picked\nwith a mom's ingredient eye.",
+    "subtitle": "From the U.S., Korea, and around the world — only snacks and drinks that pass our concierge-mom's strict ingredient check.",
+    "momBadge": "Ingredient-checked by mom",
+    "momCheck": "Mom's seal of approval",
+    "popular": "Popular",
+    "count": "{count} curated picks",
     "tab": {
-      "tags": "Quick tags",
-      "chat": "Chat guide"
+      "all": "All",
+      "us": "USA",
+      "kr": "Korea",
+      "world": "World"
     },
-    "chat": {
-      "greeting": "Hi! What kind of meal are you in the mood for?",
-      "step": "Step",
-      "of": "of",
-      "next": "Next",
-      "back": "Back",
-      "restart": "Start over",
-      "addToCart": "Add to cart",
-      "cartAdded": "Your pick has been added to the cart!"
-    },
-    "step1": { "title": "How much spice do you like?" },
-    "step2": {
-      "title": "Any allergies to avoid?",
-      "subtitle": "Select all that apply."
-    },
-    "step3": { "title": "How many of you tonight?" },
-    "step4": {
-      "title": "What's your style?",
-      "subtitle": "Healthy first, or all about the flavor?"
-    },
-    "step6": { "title": "What's your mood right now?" },
-    "style": {
-      "healthy": "Healthy first",
-      "flavor": "All flavor",
-      "balanced": "Balanced"
-    },
-    "spice": {
-      "0": "None",
-      "1": "Mild",
-      "2": "A little",
-      "3": "Medium",
-      "4": "Hot",
-      "5": "Inferno"
-    },
-    "party": {
-      "solo": "Solo",
-      "duo": "Two of us",
-      "group": "A group"
-    },
-    "mood": {
-      "stress-relief": "Stressed out",
-      "hearty": "Hearty & filling",
-      "light": "Light bite",
-      "sweet": "Something sweet",
-      "adventurous": "First-time adventure"
-    },
-    "result": {
-      "title": "Today's pick for you",
-      "main": "Main"
+    "region": {
+      "us": "USA",
+      "kr": "KOREA",
+      "world": "WORLD"
     }
   },
   "membership": {

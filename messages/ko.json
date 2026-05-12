@@ -41,14 +41,10 @@
   "menu": {
     "eyebrow": "Menu",
     "title": "메뉴 쇼케이스",
-    "subtitle": "5개 카테고리, 60+ 메뉴. 태그로 골라보세요.",
+    "subtitle": "정통 한식 25종 — 태그로 골라보세요.",
     "spice": "매움도",
     "category": {
-      "street-food": "분식 & 메인",
-      "bubble-tea": "버블티",
-      "banchan-bento": "반찬 & 도시락",
-      "k-snack": "한국 스낵",
-      "us-snack": "미국 스낵"
+      "street-food": "전체 메뉴"
     },
     "filter": {
       "title": "취향 필터",
@@ -136,21 +132,11 @@
       "title": "어떤 스타일이 좋으세요?",
       "subtitle": "건강 위주, 맛 위주 — 무엇을 우선할까요?"
     },
-    "step5": {
-      "title": "스낵도 함께 드릴까요?",
-      "subtitle": "한국 / 미국 과자 — 골라보세요."
-    },
     "step6": { "title": "지금 기분은 어떠세요?" },
     "style": {
       "healthy": "건강식 위주",
       "flavor": "맛 위주",
       "balanced": "균형"
-    },
-    "snack": {
-      "k-snack": "한국 스낵",
-      "us-snack": "미국 스낵",
-      "both": "둘 다",
-      "none": "스낵 없이"
     },
     "spice": {
       "0": "안 매워요",
@@ -174,11 +160,7 @@
     },
     "result": {
       "title": "오늘의 추천",
-      "main": "메인",
-      "side": "사이드",
-      "drink": "음료",
-      "kSnack": "한국 스낵",
-      "usSnack": "미국 스낵"
+      "main": "메인"
     }
   },
   "membership": {

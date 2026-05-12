@@ -1,569 +1,447 @@
 import type { MenuItem } from '@/lib/types';
 
 export const menu: MenuItem[] = [
-  // ── 분식 & 메인 (street-food) ─────────────────────────────────────────
+  // ── 만두 ───────────────────────────────────────────────────────────────
   {
-    id: 'tteokbokki-classic',
-    slug: 'tteokbokki-classic',
+    id: 'doeji-mandu',
+    slug: 'doeji-mandu',
     category: 'street-food',
-    name: { ko: '국민 떡볶이', en: 'Classic Tteokbokki' },
-    shortDesc: { ko: '쫄깃한 떡과 매콤달콤 고추장 소스', en: 'Chewy rice cakes in sweet & spicy gochujang sauce' },
-    priceUSD: 11.5,
-    spiceLevel: 3,
-    allergens: ['gluten', 'soy', 'sesame'],
+    name: { ko: '돼지 만두', en: 'Pork Mandu' },
+    shortDesc: {
+      ko: '돼지고기·배추·부추·당면 (10개)',
+      en: 'Pork dumplings with cabbage, chives & glass noodle (10 pcs)'
+    },
+    priceUSD: 13.99,
+    spiceLevel: 0,
+    allergens: ['pork', 'gluten', 'soy'],
     dietTags: ['hearty', 'first-timer'],
-    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'mood:stress-relief', 'party:solo', 'party:duo'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🥟',
+    imageGradient: ['#E8B07A', '#7A4818']
+  },
+  {
+    id: 'bulgogi-mandu',
+    slug: 'bulgogi-mandu',
+    category: 'street-food',
+    name: { ko: '불고기 만두', en: 'Bulgogi Mandu' },
+    shortDesc: {
+      ko: '불고기·양배추·당근·당면 (10개)',
+      en: 'Beef bulgogi dumplings with cabbage, carrot & glass noodle (10 pcs)'
+    },
+    priceUSD: 14.99,
+    spiceLevel: 0,
+    allergens: ['beef', 'gluten', 'soy'],
+    dietTags: ['hearty', 'first-timer'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🥟',
+    imageGradient: ['#D9A85E', '#8A5A1E'],
+    popular: true
+  },
+  {
+    id: 'daggogi-mandu',
+    slug: 'daggogi-mandu',
+    category: 'street-food',
+    name: { ko: '닭고기 만두', en: 'Chicken Mandu' },
+    shortDesc: {
+      ko: '닭고기·배추·부추·당근 (10개)',
+      en: 'Chicken dumplings with cabbage, chives & carrot (10 pcs)'
+    },
+    priceUSD: 13.99,
+    spiceLevel: 0,
+    allergens: ['gluten', 'soy'],
+    dietTags: ['hearty', 'first-timer', 'kid-friendly'],
+    conciergeTags: ['hearty', 'first-timer', 'kid-friendly', 'mood:hearty', 'mood:light', 'party:duo', 'party:group'],
+    emoji: '🥟',
+    imageGradient: ['#F4D08A', '#A86F1E']
+  },
+  {
+    id: 'kimchi-mandu',
+    slug: 'kimchi-mandu',
+    category: 'street-food',
+    name: { ko: '김치 만두', en: 'Kimchi Mandu' },
+    shortDesc: {
+      ko: '김치·돼지고기·당면 (10개)',
+      en: 'Kimchi & pork dumplings with glass noodle (10 pcs)'
+    },
+    priceUSD: 13.99,
+    spiceLevel: 2,
+    allergens: ['pork', 'gluten', 'soy'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🥟',
+    imageGradient: ['#E36F4A', '#8B2A18']
+  },
+
+  // ── 불고기 / 메인 ──────────────────────────────────────────────────────
+  {
+    id: 'bulgogi',
+    slug: 'bulgogi',
+    category: 'street-food',
+    name: { ko: '불고기', en: 'Beef Bulgogi' },
+    shortDesc: {
+      ko: '한국 전통 양념 소고기 덮밥 (양파·당근·버섯·마늘·배)',
+      en: 'Korean marinated beef over rice with onion, carrot, mushroom, garlic & pear'
+    },
+    priceUSD: 22.99,
+    spiceLevel: 0,
+    allergens: ['beef', 'soy', 'sesame'],
+    dietTags: ['hearty', 'first-timer'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🥩',
+    imageGradient: ['#D8A157', '#5A2E12'],
+    popular: true
+  },
+  {
+    id: 'doeji-bulgogi',
+    slug: 'doeji-bulgogi',
+    category: 'street-food',
+    name: { ko: '돼지 불고기', en: 'Pork Bulgogi' },
+    shortDesc: {
+      ko: '한국 전통 양념 돼지고기 덮밥 (양파·당근·버섯·마늘·배)',
+      en: 'Korean marinated pork over rice with onion, carrot, mushroom, garlic & pear'
+    },
+    priceUSD: 20.99,
+    spiceLevel: 1,
+    allergens: ['pork', 'soy', 'sesame'],
+    dietTags: ['hearty'],
+    conciergeTags: ['hearty', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🐖',
+    imageGradient: ['#E8866A', '#7E2F18']
+  },
+  {
+    id: 'dag-bulgogi',
+    slug: 'dag-bulgogi',
+    category: 'street-food',
+    name: { ko: '닭 불고기', en: 'Chicken Bulgogi' },
+    shortDesc: {
+      ko: '한국 전통 양념 닭고기 덮밥 (양파·당근·버섯·마늘·배)',
+      en: 'Korean marinated chicken over rice with onion, carrot, mushroom, garlic & pear'
+    },
+    priceUSD: 20.99,
+    spiceLevel: 1,
+    allergens: ['soy', 'sesame'],
+    dietTags: ['hearty', 'first-timer'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🍗',
+    imageGradient: ['#F4C56A', '#8A5A1E']
+  },
+  {
+    id: 'jeyukbokkeum',
+    slug: 'jeyukbokkeum',
+    category: 'street-food',
+    name: { ko: '제육볶음', en: 'Spicy Stir-fried Pork' },
+    shortDesc: {
+      ko: '매콤한 돼지(또는 닭) 볶음 (양파·당근·양배추·마늘)',
+      en: 'Spicy stir-fried pork or chicken with onion, carrot, cabbage & garlic'
+    },
+    priceUSD: 19.99,
+    spiceLevel: 4,
+    allergens: ['pork', 'soy', 'sesame'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🌶️',
+    imageGradient: ['#E0623E', '#7E1F0F']
+  },
+  {
+    id: 'ojingo-bokkeum',
+    slug: 'ojingo-bokkeum',
+    category: 'street-food',
+    name: { ko: '오징어 볶음', en: 'Spicy Squid Stir-fry' },
+    shortDesc: {
+      ko: '매콤한 오징어 볶음 (양파·당근·애호박·마늘·고추장)',
+      en: 'Spicy squid with onion, carrot, zucchini, garlic & chili paste'
+    },
+    priceUSD: 20.99,
+    spiceLevel: 4,
+    allergens: ['shellfish', 'soy', 'sesame'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🦑',
+    imageGradient: ['#D9533A', '#5E1D12']
+  },
+  {
+    id: 'osam-bulgogi',
+    slug: 'osam-bulgogi',
+    category: 'street-food',
+    name: { ko: '오삼 불고기', en: 'Spicy Squid & Pork' },
+    shortDesc: {
+      ko: '오징어 + 돼지고기 매콤 볶음 (양파·당근·애호박·고추장)',
+      en: 'Spicy squid & pork stir-fry with onion, carrot, zucchini & chili paste'
+    },
+    priceUSD: 19.99,
+    spiceLevel: 4,
+    allergens: ['pork', 'shellfish', 'soy', 'sesame'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:adventurous', 'party:duo', 'party:group'],
+    emoji: '🌶️',
+    imageGradient: ['#D6593E', '#5A1E14']
+  },
+
+  // ── 밥 / 면 ────────────────────────────────────────────────────────────
+  {
+    id: 'kimchi-bokkeumbap',
+    slug: 'kimchi-bokkeumbap',
+    category: 'street-food',
+    name: { ko: '김치 볶음밥', en: 'Kimchi Fried Rice' },
+    shortDesc: {
+      ko: '김치 볶음밥 + 고기(소/돼지/닭) + 계란 후라이',
+      en: 'Kimchi fried rice with choice of meat & a fried egg on top'
+    },
+    priceUSD: 15.99,
+    spiceLevel: 3,
+    allergens: ['egg', 'soy'],
+    dietTags: ['hearty', 'spicy', 'first-timer'],
+    conciergeTags: ['hearty', 'spicy', 'first-timer', 'mood:hearty', 'mood:stress-relief', 'party:solo', 'party:duo'],
+    emoji: '🍚',
+    imageGradient: ['#E8643E', '#7A1F14'],
+    popular: true
+  },
+  {
+    id: 'jabchaebap',
+    slug: 'jabchaebap',
+    category: 'street-food',
+    name: { ko: '잡채밥', en: 'Japchae over Rice' },
+    shortDesc: {
+      ko: '당면 잡채 + 밥 (소고기·시금치·당근·버섯·계란)',
+      en: 'Glass noodle japchae over rice with beef, spinach, carrot, mushroom & egg'
+    },
+    priceUSD: 16.99,
+    spiceLevel: 0,
+    allergens: ['beef', 'soy', 'egg', 'sesame'],
+    dietTags: ['hearty', 'first-timer'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'mood:light', 'party:solo', 'party:duo'],
+    emoji: '🍝',
+    imageGradient: ['#C3A56A', '#6B4A1E']
+  },
+  {
+    id: 'bibimbap',
+    slug: 'bibimbap',
+    category: 'street-food',
+    name: { ko: '비빔밥', en: 'Bibimbap' },
+    shortDesc: {
+      ko: '소고기 + 시금치·당근·무·콩나물·버섯·계란 (매콤 양념)',
+      en: 'Beef & vegetables over rice with spicy sauce & egg'
+    },
+    priceUSD: 15.99,
+    spiceLevel: 2,
+    allergens: ['beef', 'egg', 'soy', 'sesame'],
+    dietTags: ['hearty', 'healthy', 'first-timer'],
+    conciergeTags: ['hearty', 'healthy', 'first-timer', 'mood:hearty', 'mood:light', 'party:solo', 'party:duo'],
+    emoji: '🍲',
+    imageGradient: ['#E89A4A', '#7A3A14'],
+    popular: true
+  },
+  {
+    id: 'dolsot-bibimbap',
+    slug: 'dolsot-bibimbap',
+    category: 'street-food',
+    name: { ko: '돌솥 비빔밥', en: 'Stone-pot Bibimbap' },
+    shortDesc: {
+      ko: '뜨거운 돌솥 비빔밥 (소고기·시금치·당근·무·콩나물·버섯·계란)',
+      en: 'Sizzling stone-pot bibimbap with beef, vegetables & egg'
+    },
+    priceUSD: 17.99,
+    spiceLevel: 2,
+    allergens: ['beef', 'egg', 'soy', 'sesame'],
+    dietTags: ['hearty', 'healthy', 'first-timer'],
+    conciergeTags: ['hearty', 'healthy', 'first-timer', 'mood:hearty', 'mood:light', 'party:solo', 'party:duo'],
+    emoji: '🥘',
+    imageGradient: ['#D88A3E', '#5A2E10']
+  },
+  {
+    id: 'tteokbokki',
+    slug: 'tteokbokki',
+    category: 'street-food',
+    name: { ko: '떡볶이', en: 'Tteokbokki' },
+    shortDesc: {
+      ko: '매콤달콤 떡볶이 (어묵·양배추·양파·당근·라면)',
+      en: 'Sweet & spicy rice cakes with fish cake, cabbage & ramen'
+    },
+    priceUSD: 13.99,
+    spiceLevel: 3,
+    allergens: ['gluten', 'soy'],
+    dietTags: ['hearty', 'spicy', 'first-timer'],
+    conciergeTags: ['hearty', 'spicy', 'first-timer', 'mood:hearty', 'mood:stress-relief', 'party:solo', 'party:duo'],
     emoji: '🍡',
     imageGradient: ['#E8775A', '#C8322D'],
     popular: true
   },
   {
-    id: 'rosé-tteokbokki',
-    slug: 'rose-tteokbokki',
+    id: 'jjajangmyeon',
+    slug: 'jjajangmyeon',
     category: 'street-food',
-    name: { ko: '로제 떡볶이', en: 'Rosé Tteokbokki' },
-    shortDesc: { ko: '크림이 부드럽게 감싸주는 순한 매콤', en: 'Creamy, mellow heat with mozzarella' },
-    priceUSD: 13.5,
-    spiceLevel: 2,
-    allergens: ['gluten', 'dairy', 'soy'],
-    dietTags: ['hearty', 'kid-friendly', 'first-timer'],
-    conciergeTags: ['kid-friendly', 'first-timer', 'hearty', 'mood:hearty', 'mood:sweet', 'party:duo', 'party:group'],
-    emoji: '🌹',
-    imageGradient: ['#F4B6A0', '#DE6E62'],
-    newItem: true
-  },
-  {
-    id: 'kimbap-tuna',
-    slug: 'kimbap-tuna',
-    category: 'street-food',
-    name: { ko: '참치 김밥', en: 'Tuna Kimbap' },
-    shortDesc: { ko: '고소한 참치마요와 단무지', en: 'Tuna mayo, pickled radish, fresh veg' },
-    priceUSD: 9.0,
+    name: { ko: '짜장면', en: 'Jjajangmyeon' },
+    shortDesc: {
+      ko: '춘장 소스 면 (돼지고기·양파·양배추·오이)',
+      en: 'Noodles in black bean sauce with pork, onion, cabbage & cucumber'
+    },
+    priceUSD: 13.99,
     spiceLevel: 0,
-    allergens: ['gluten', 'egg', 'soy', 'sesame'],
-    dietTags: ['kid-friendly', 'first-timer', 'healthy'],
-    conciergeTags: ['kid-friendly', 'first-timer', 'healthy', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🍙',
-    imageGradient: ['#94B49F', '#3C6E47']
-  },
-  {
-    id: 'kimbap-bulgogi',
-    slug: 'kimbap-bulgogi',
-    category: 'street-food',
-    name: { ko: '불고기 김밥', en: 'Bulgogi Kimbap' },
-    shortDesc: { ko: '달콤짭짤 불고기를 통째로', en: 'Sweet-savory bulgogi beef wrapped tight' },
-    priceUSD: 10.5,
-    spiceLevel: 0,
-    allergens: ['gluten', 'beef', 'soy', 'sesame'],
-    dietTags: ['hearty', 'first-timer'],
-    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:solo', 'party:duo'],
-    emoji: '🍱',
-    imageGradient: ['#D9A85E', '#8A5A1E'],
-    popular: true
-  },
-  {
-    id: 'ramen-cheese',
-    slug: 'ramen-cheese',
-    category: 'street-food',
-    name: { ko: '치즈 라면', en: 'Cheese Ramen' },
-    shortDesc: { ko: '얼큰한 국물 위에 녹는 치즈', en: 'Spicy broth crowned with melting cheese' },
-    priceUSD: 10.0,
-    spiceLevel: 4,
-    allergens: ['gluten', 'dairy', 'soy', 'egg'],
-    dietTags: ['hearty', 'spicy'],
-    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo'],
-    emoji: '🍜',
-    imageGradient: ['#E8B257', '#C7531E']
-  },
-  {
-    id: 'sundae-platter',
-    slug: 'sundae-platter',
-    category: 'street-food',
-    name: { ko: '순대 모둠', en: 'Sundae Platter' },
-    shortDesc: { ko: '쫄깃한 순대와 간, 매콤소금장', en: 'Chewy blood sausage, liver, chili salt' },
-    priceUSD: 13.0,
-    spiceLevel: 2,
     allergens: ['pork', 'gluten', 'soy'],
-    dietTags: ['hearty', 'spicy'],
-    conciergeTags: ['hearty', 'spicy', 'mood:adventurous', 'party:duo', 'party:group'],
-    emoji: '🥢',
-    imageGradient: ['#A66B5C', '#4F2A20']
+    dietTags: ['hearty', 'first-timer', 'kid-friendly'],
+    conciergeTags: ['hearty', 'first-timer', 'kid-friendly', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🍜',
+    imageGradient: ['#5E3A24', '#2A1810']
   },
+  {
+    id: 'jjamppong',
+    slug: 'jjamppong',
+    category: 'street-food',
+    name: { ko: '짬뽕', en: 'Jjamppong' },
+    shortDesc: {
+      ko: '매콤 해물 짬뽕 (새우·오징어·홍합·양배추·애호박)',
+      en: 'Spicy seafood noodle soup with shrimp, squid, mussels & veggies'
+    },
+    priceUSD: 16.99,
+    spiceLevel: 4,
+    allergens: ['shellfish', 'gluten'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo', 'party:duo'],
+    emoji: '🍜',
+    imageGradient: ['#E25A3A', '#6B1A0F']
+  },
+
+  // ── 찌개 ───────────────────────────────────────────────────────────────
   {
     id: 'kimchi-jjigae',
     slug: 'kimchi-jjigae',
     category: 'street-food',
     name: { ko: '김치찌개', en: 'Kimchi Stew' },
-    shortDesc: { ko: '푹 익은 김치와 두부, 돼지고기', en: 'Aged kimchi, tofu, and tender pork' },
-    priceUSD: 13.5,
+    shortDesc: {
+      ko: '푹 익은 김치찌개 + 밥 (고기 선택·두부·햄·파)',
+      en: 'Hearty kimchi stew with choice of meat, tofu, ham & rice'
+    },
+    priceUSD: 15.99,
     spiceLevel: 3,
     allergens: ['pork', 'soy'],
-    dietTags: ['hearty', 'spicy', 'healthy'],
-    conciergeTags: ['hearty', 'spicy', 'healthy', 'mood:stress-relief', 'mood:hearty', 'party:solo', 'party:duo'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo', 'party:duo'],
     emoji: '🍲',
     imageGradient: ['#D1543A', '#7A1F14']
   },
   {
-    id: 'japchae',
-    slug: 'japchae',
+    id: 'sundubu-jjigae',
+    slug: 'sundubu-jjigae',
     category: 'street-food',
-    name: { ko: '잡채', en: 'Japchae' },
-    shortDesc: { ko: '쫄깃 당면과 채소의 단짠', en: 'Glass noodles tossed with seasoned veggies' },
-    priceUSD: 12.5,
-    spiceLevel: 0,
-    allergens: ['soy', 'sesame', 'egg'],
-    dietTags: ['vegetarian', 'kid-friendly', 'first-timer', 'healthy'],
-    conciergeTags: ['vegetarian', 'kid-friendly', 'first-timer', 'healthy', 'mood:light', 'party:duo', 'party:group'],
-    emoji: '🍝',
-    imageGradient: ['#C3A56A', '#6B4A1E']
-  },
-
-  // ── 버블티 (bubble-tea) ────────────────────────────────────────────────
-  {
-    id: 'bt-classic-milk',
-    slug: 'classic-milk-tea',
-    category: 'bubble-tea',
-    name: { ko: '클래식 밀크티', en: 'Classic Milk Tea' },
-    shortDesc: { ko: '진한 홍차와 부드러운 우유', en: 'Bold black tea, creamy milk' },
-    priceUSD: 5.5,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['sweet', 'kid-friendly', 'first-timer'],
-    conciergeTags: ['sweet', 'kid-friendly', 'first-timer', 'mood:sweet', 'mood:light', 'party:solo', 'party:duo', 'party:group'],
-    emoji: '🧋',
-    imageGradient: ['#D9B48F', '#7A4A22'],
-    popular: true
-  },
-  {
-    id: 'bt-taro',
-    slug: 'taro-latte',
-    category: 'bubble-tea',
-    name: { ko: '타로 라떼', en: 'Taro Latte' },
-    shortDesc: { ko: '고소한 타로와 우유', en: 'Earthy taro folded into milk' },
-    priceUSD: 6.0,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['sweet', 'kid-friendly'],
-    conciergeTags: ['sweet', 'kid-friendly', 'mood:sweet', 'mood:adventurous', 'party:solo', 'party:duo'],
-    emoji: '💜',
-    imageGradient: ['#C7A6E5', '#6B4391']
-  },
-  {
-    id: 'bt-mango-yakult',
-    slug: 'mango-yakult',
-    category: 'bubble-tea',
-    name: { ko: '망고 야쿠르트', en: 'Mango Yakult' },
-    shortDesc: { ko: '상큼한 망고와 새콤한 야쿠르트', en: 'Mango with tangy probiotic soda' },
-    priceUSD: 6.5,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['sweet', 'kid-friendly', 'first-timer'],
-    conciergeTags: ['sweet', 'kid-friendly', 'first-timer', 'mood:sweet', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🥭',
-    imageGradient: ['#F7C760', '#D86A1F']
-  },
-  {
-    id: 'bt-strawberry',
-    slug: 'strawberry-smoothie',
-    category: 'bubble-tea',
-    name: { ko: '딸기 스무디', en: 'Strawberry Smoothie' },
-    shortDesc: { ko: '진짜 딸기로 만든 스무디', en: 'Real strawberry, blended frosty' },
-    priceUSD: 6.5,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['sweet', 'kid-friendly', 'healthy'],
-    conciergeTags: ['sweet', 'kid-friendly', 'healthy', 'mood:sweet', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🍓',
-    imageGradient: ['#F49AA3', '#B23B4A']
-  },
-  {
-    id: 'bt-matcha',
-    slug: 'matcha-latte',
-    category: 'bubble-tea',
-    name: { ko: '말차 라떼', en: 'Matcha Latte' },
-    shortDesc: { ko: '쌉쌀한 말차와 부드러운 우유', en: 'Bittersweet matcha with steamed milk' },
-    priceUSD: 6.5,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['healthy', 'first-timer'],
-    conciergeTags: ['healthy', 'first-timer', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🍵',
-    imageGradient: ['#A3C58A', '#3F6C36']
-  },
-  {
-    id: 'bt-brown-sugar',
-    slug: 'brown-sugar-boba',
-    category: 'bubble-tea',
-    name: { ko: '흑당 버블티', en: 'Brown Sugar Boba' },
-    shortDesc: { ko: '진한 흑당 시럽과 쫀득 펄', en: 'Caramelized brown sugar over chewy pearls' },
-    priceUSD: 6.75,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['sweet'],
-    conciergeTags: ['sweet', 'mood:sweet', 'party:solo', 'party:duo'],
-    emoji: '🤎',
-    imageGradient: ['#C9925A', '#5A3A20'],
-    popular: true
-  },
-
-  // ── 반찬 & 도시락 (banchan-bento) ─────────────────────────────────────
-  {
-    id: 'banchan-set',
-    slug: 'banchan-trio',
-    category: 'banchan-bento',
-    name: { ko: '반찬 3종 세트', en: 'Banchan Trio' },
-    shortDesc: { ko: '계절 김치 + 멸치 + 시금치', en: 'Seasonal kimchi, anchovy, spinach' },
-    priceUSD: 7.5,
-    spiceLevel: 2,
-    allergens: ['shellfish', 'soy', 'sesame'],
-    dietTags: ['healthy', 'first-timer'],
-    conciergeTags: ['healthy', 'first-timer', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🥬',
-    imageGradient: ['#9CBD7E', '#3F6432']
-  },
-  {
-    id: 'bento-bulgogi',
-    slug: 'bento-bulgogi',
-    category: 'banchan-bento',
-    name: { ko: '불고기 도시락', en: 'Bulgogi Bento' },
-    shortDesc: { ko: '불고기 + 밥 + 반찬 4종', en: 'Bulgogi over rice with four sides' },
-    priceUSD: 14.5,
-    spiceLevel: 1,
-    allergens: ['beef', 'gluten', 'soy', 'sesame', 'egg'],
-    dietTags: ['hearty', 'first-timer'],
-    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:solo'],
-    emoji: '🍱',
-    imageGradient: ['#D8A157', '#7A4818'],
-    popular: true
-  },
-  {
-    id: 'bento-spicy-chicken',
-    slug: 'bento-spicy-chicken',
-    category: 'banchan-bento',
-    name: { ko: '매콤 닭갈비 도시락', en: 'Spicy Chicken Bento' },
-    shortDesc: { ko: '불맛 가득 닭갈비 한 그릇', en: 'Smoky, spicy stir-fried chicken' },
-    priceUSD: 14.0,
-    spiceLevel: 4,
-    allergens: ['gluten', 'soy', 'sesame'],
-    dietTags: ['hearty', 'spicy'],
-    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:solo'],
-    emoji: '🌶️',
-    imageGradient: ['#E0623E', '#7E1F0F']
-  },
-  {
-    id: 'bento-veggie',
-    slug: 'bento-veggie',
-    category: 'banchan-bento',
-    name: { ko: '채소 도시락', en: 'Garden Veggie Bento' },
-    shortDesc: { ko: '두부 + 잡채 + 5색 반찬', en: 'Tofu, japchae, five colorful banchan' },
-    priceUSD: 12.5,
-    spiceLevel: 0,
-    allergens: ['soy', 'sesame'],
-    dietTags: ['vegetarian', 'healthy', 'first-timer'],
-    conciergeTags: ['vegetarian', 'healthy', 'first-timer', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🥗',
-    imageGradient: ['#9CBA70', '#3D6334']
-  },
-  {
-    id: 'kids-bento',
-    slug: 'kids-bento',
-    category: 'banchan-bento',
-    name: { ko: '아이들 도시락', en: 'Kids Bento' },
-    shortDesc: { ko: '미니 김밥 + 너겟 + 과일', en: 'Mini kimbap, nuggets, fruit cup' },
-    priceUSD: 9.5,
-    spiceLevel: 0,
-    allergens: ['gluten', 'egg', 'soy'],
-    dietTags: ['kid-friendly', 'first-timer'],
-    conciergeTags: ['kid-friendly', 'first-timer', 'mood:light', 'party:group', 'party:duo'],
-    emoji: '🧒',
-    imageGradient: ['#F8C7B0', '#C66D52']
-  },
-  {
-    id: 'banchan-kimchi',
-    slug: 'kimchi-side',
-    category: 'banchan-bento',
-    name: { ko: '겉절이 김치', en: 'Fresh Kimchi' },
-    shortDesc: { ko: '갓 무친 시원한 김치', en: 'Freshly tossed crunchy kimchi' },
-    priceUSD: 4.5,
+    name: { ko: '순두부찌개', en: 'Soft Tofu Stew' },
+    shortDesc: {
+      ko: '순두부·돼지고기·애호박·조개·오징어·계란 + 밥',
+      en: 'Soft tofu stew with pork, clam, squid, zucchini & egg over rice'
+    },
+    priceUSD: 16.99,
     spiceLevel: 3,
-    allergens: ['shellfish', 'sesame'],
-    dietTags: ['healthy', 'spicy', 'vegan'],
-    conciergeTags: ['healthy', 'spicy', 'mood:light', 'party:solo', 'party:duo', 'party:group'],
-    emoji: '🥬',
-    imageGradient: ['#E36F4A', '#8B2A18']
+    allergens: ['pork', 'shellfish', 'soy', 'egg'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:hearty', 'mood:stress-relief', 'party:solo', 'party:duo'],
+    emoji: '🍲',
+    imageGradient: ['#E26A4A', '#6E1F14']
   },
   {
-    id: 'banchan-sigeumchi',
-    slug: 'sigeumchi-namul',
-    category: 'banchan-bento',
-    name: { ko: '시금치나물', en: 'Seasoned Spinach' },
-    shortDesc: { ko: '참기름 향 가득 시금치 무침', en: 'Spinach tossed with sesame oil' },
-    priceUSD: 3.5,
+    id: 'budae-jjigae',
+    slug: 'budae-jjigae',
+    category: 'street-food',
+    name: { ko: '부대찌개', en: 'Army Base Stew' },
+    shortDesc: {
+      ko: '햄·소시지·라면·두부·당면·양배추 매콤 찌개 + 밥',
+      en: 'Spicy stew with ham, sausage, ramen, tofu & glass noodle, with rice'
+    },
+    priceUSD: 19.99,
+    spiceLevel: 3,
+    allergens: ['pork', 'gluten', 'soy'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:stress-relief', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🍲',
+    imageGradient: ['#D6553A', '#5E1A10']
+  },
+
+  // ── 전 ─────────────────────────────────────────────────────────────────
+  {
+    id: 'haemul-buchujeon',
+    slug: 'haemul-buchujeon',
+    category: 'street-food',
+    name: { ko: '해물 부추전', en: 'Seafood Pancake' },
+    shortDesc: {
+      ko: '한국식 해물 부추전 (새우·애호박·당근·계란)',
+      en: 'Korean seafood scallion pancake with shrimp, zucchini, carrot & egg'
+    },
+    priceUSD: 15.99,
     spiceLevel: 0,
-    allergens: ['sesame', 'soy'],
-    dietTags: ['vegetarian', 'vegan', 'healthy', 'first-timer'],
-    conciergeTags: ['vegetarian', 'healthy', 'first-timer', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🥬',
-    imageGradient: ['#7BA56C', '#2E5A24']
+    allergens: ['shellfish', 'gluten', 'egg'],
+    dietTags: ['hearty', 'first-timer'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'mood:light', 'party:duo', 'party:group'],
+    emoji: '🥞',
+    imageGradient: ['#E8B26A', '#8A5A1E']
   },
   {
-    id: 'banchan-kongnamul',
-    slug: 'kongnamul-muchim',
-    category: 'banchan-bento',
-    name: { ko: '콩나물 무침', en: 'Soybean Sprout Salad' },
-    shortDesc: { ko: '아삭한 콩나물에 마늘 한 줌', en: 'Crunchy sprouts with garlic and sesame' },
-    priceUSD: 3.5,
-    spiceLevel: 0,
-    allergens: ['soy', 'sesame'],
-    dietTags: ['vegetarian', 'vegan', 'healthy', 'first-timer'],
-    conciergeTags: ['vegetarian', 'healthy', 'first-timer', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🌱',
-    imageGradient: ['#E8D88A', '#9C7A2A']
-  },
-  {
-    id: 'banchan-musaengchae',
-    slug: 'musaengchae',
-    category: 'banchan-bento',
-    name: { ko: '무생채', en: 'Spicy Radish Salad' },
-    shortDesc: { ko: '아삭달콤 매콤한 무 채', en: 'Crisp radish in sweet-spicy dressing' },
-    priceUSD: 3.5,
+    id: 'kimchi-buchujeon',
+    slug: 'kimchi-buchujeon',
+    category: 'street-food',
+    name: { ko: '김치 부추전', en: 'Kimchi Pancake' },
+    shortDesc: {
+      ko: '매콤한 김치 부추전 (양파·애호박)',
+      en: 'Kimchi & chive pancake with onion and zucchini'
+    },
+    priceUSD: 15.99,
     spiceLevel: 2,
-    allergens: ['sesame'],
-    dietTags: ['vegetarian', 'vegan', 'healthy', 'spicy'],
-    conciergeTags: ['vegetarian', 'healthy', 'spicy', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🥗',
-    imageGradient: ['#F4A580', '#B85E2E']
+    allergens: ['gluten', 'egg'],
+    dietTags: ['hearty', 'spicy'],
+    conciergeTags: ['hearty', 'spicy', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🥞',
+    imageGradient: ['#E07A4A', '#7A2818']
   },
+
+  // ── 갈비 / 탕수육 ──────────────────────────────────────────────────────
   {
-    id: 'banchan-myeolchi',
-    slug: 'myeolchi-bokkeum',
-    category: 'banchan-bento',
-    name: { ko: '멸치 볶음', en: 'Glazed Anchovies' },
-    shortDesc: { ko: '달콤짭짤한 멸치 볶음', en: 'Sweet-salty stir-fried baby anchovies' },
-    priceUSD: 4.0,
-    spiceLevel: 1,
-    allergens: ['shellfish', 'soy', 'sesame'],
-    dietTags: ['hearty', 'healthy'],
-    conciergeTags: ['hearty', 'healthy', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🐟',
-    imageGradient: ['#D69256', '#7A4A1A']
-  },
-  {
-    id: 'banchan-gyeranmari',
-    slug: 'gyeran-mari',
-    category: 'banchan-bento',
-    name: { ko: '계란말이', en: 'Rolled Omelette' },
-    shortDesc: { ko: '부드럽고 폭신한 계란말이', en: 'Soft, layered Korean omelette' },
-    priceUSD: 5.0,
+    id: 'galbi',
+    slug: 'galbi',
+    category: 'street-food',
+    name: { ko: '소갈비', en: 'Beef Galbi' },
+    shortDesc: {
+      ko: '한국식 양념 소갈비 구이 + 밥 (양파·당근·버섯·마늘·배)',
+      en: 'Korean-style marinated beef short ribs with rice & veggies'
+    },
+    priceUSD: 27.99,
     spiceLevel: 0,
-    allergens: ['egg'],
-    dietTags: ['vegetarian', 'kid-friendly', 'first-timer', 'healthy'],
-    conciergeTags: ['vegetarian', 'kid-friendly', 'first-timer', 'healthy', 'mood:light', 'party:solo', 'party:duo'],
-    emoji: '🍳',
-    imageGradient: ['#F7D86A', '#B88828'],
+    allergens: ['beef', 'soy', 'sesame'],
+    dietTags: ['hearty', 'first-timer'],
+    conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:duo', 'party:group'],
+    emoji: '🍖',
+    imageGradient: ['#A86B4A', '#42201A'],
     popular: true
   },
   {
-    id: 'banchan-kkakdugi',
-    slug: 'kkakdugi',
-    category: 'banchan-bento',
-    name: { ko: '깍두기', en: 'Cubed Radish Kimchi' },
-    shortDesc: { ko: '아삭한 무 깍두기', en: 'Crunchy fermented radish cubes' },
-    priceUSD: 4.0,
-    spiceLevel: 2,
-    allergens: ['shellfish'],
-    dietTags: ['healthy', 'spicy', 'vegan'],
-    conciergeTags: ['healthy', 'spicy', 'mood:light', 'party:solo', 'party:duo', 'party:group'],
-    emoji: '🟥',
-    imageGradient: ['#D9583A', '#7E1E0F']
-  },
-  {
-    id: 'banchan-hobakjeon',
-    slug: 'hobak-jeon',
-    category: 'banchan-bento',
-    name: { ko: '호박전', en: 'Zucchini Pancake' },
-    shortDesc: { ko: '얇게 부친 호박전', en: 'Pan-fried zucchini coins' },
-    priceUSD: 4.5,
+    id: 'doejigogi-tangsuyuk',
+    slug: 'doejigogi-tangsuyuk',
+    category: 'street-food',
+    name: { ko: '돼지고기 탕수육', en: 'Sweet & Sour Pork' },
+    shortDesc: {
+      ko: '바삭 튀긴 돼지고기 + 새콤달콤 소스 (파인애플·피망·당근·양파·버섯)',
+      en: 'Crispy fried pork with sweet & sour sauce, pineapple, peppers & veggies'
+    },
+    priceUSD: 24.99,
     spiceLevel: 0,
-    allergens: ['gluten', 'egg', 'soy'],
-    dietTags: ['vegetarian', 'first-timer', 'kid-friendly'],
-    conciergeTags: ['vegetarian', 'first-timer', 'kid-friendly', 'mood:light', 'party:duo', 'party:group'],
-    emoji: '🟢',
-    imageGradient: ['#A8C56C', '#4E6E22']
-  },
-
-  // ── 한국 스낵 (k-snack) ────────────────────────────────────────────────
-  {
-    id: 'snack-honeybutter',
-    slug: 'honey-butter-chip',
-    category: 'k-snack',
-    name: { ko: '허니버터칩', en: 'Honey Butter Chip' },
-    shortDesc: { ko: '달콤한 꿀과 고소한 버터', en: 'Iconic sweet-buttery potato chips' },
-    priceUSD: 4.0,
-    spiceLevel: 0,
-    allergens: ['dairy', 'gluten'],
-    dietTags: ['sweet', 'kid-friendly'],
-    conciergeTags: ['sweet', 'kid-friendly', 'mood:sweet', 'party:solo', 'party:group'],
-    emoji: '🍯',
-    imageGradient: ['#F5C56E', '#A66B1F']
+    allergens: ['pork', 'gluten'],
+    dietTags: ['hearty', 'first-timer', 'kid-friendly'],
+    conciergeTags: ['hearty', 'first-timer', 'kid-friendly', 'mood:hearty', 'mood:sweet', 'party:duo', 'party:group'],
+    emoji: '🥡',
+    imageGradient: ['#E8A04A', '#8A4818']
   },
   {
-    id: 'snack-pepero',
-    slug: 'pepero-original',
-    category: 'k-snack',
-    name: { ko: '오리지널 빼빼로', en: 'Pepero Original' },
-    shortDesc: { ko: '얇은 비스킷에 초콜릿', en: 'Crisp biscuit sticks dipped in chocolate' },
-    priceUSD: 3.5,
-    spiceLevel: 0,
-    allergens: ['dairy', 'gluten', 'soy'],
-    dietTags: ['sweet', 'kid-friendly'],
-    conciergeTags: ['sweet', 'kid-friendly', 'mood:sweet', 'party:solo', 'party:group'],
-    emoji: '🍫',
-    imageGradient: ['#C99A6A', '#6B3F1E']
-  },
-  {
-    id: 'snack-shrimp',
-    slug: 'saewookkang',
-    category: 'k-snack',
-    name: { ko: '새우깡', en: 'Shrimp Crackers' },
-    shortDesc: { ko: '국민 새우 스낵', en: "Korea's classic shrimp snack" },
-    priceUSD: 3.5,
-    spiceLevel: 0,
-    allergens: ['shellfish', 'gluten'],
-    dietTags: ['kid-friendly', 'first-timer'],
-    conciergeTags: ['kid-friendly', 'first-timer', 'mood:light', 'party:solo', 'party:group'],
-    emoji: '🦐',
-    imageGradient: ['#F2A57B', '#A04F2E']
-  },
-  {
-    id: 'snack-yakgwa',
-    slug: 'yakgwa',
-    category: 'k-snack',
-    name: { ko: '약과', en: 'Yakgwa (Honey Cookie)' },
-    shortDesc: { ko: '꿀에 절인 전통 한과', en: 'Traditional honey-soaked pastry' },
-    priceUSD: 5.0,
+    id: 'dakgogi-tangsuyuk',
+    slug: 'dakgogi-tangsuyuk',
+    category: 'street-food',
+    name: { ko: '닭고기 탕수육', en: 'Sweet & Sour Chicken' },
+    shortDesc: {
+      ko: '바삭 튀긴 닭고기 + 새콤달콤 소스 (파인애플·피망·당근·양파·버섯)',
+      en: 'Crispy fried chicken with sweet & sour sauce, pineapple, peppers & veggies'
+    },
+    priceUSD: 24.99,
     spiceLevel: 0,
     allergens: ['gluten'],
-    dietTags: ['sweet', 'first-timer'],
-    conciergeTags: ['sweet', 'first-timer', 'mood:sweet', 'mood:adventurous', 'party:solo', 'party:duo'],
-    emoji: '🍪',
-    imageGradient: ['#D4A26A', '#6E4318'],
-    newItem: true
-  },
-  {
-    id: 'snack-banana-milk',
-    slug: 'banana-milk',
-    category: 'k-snack',
-    name: { ko: '바나나우유', en: 'Banana Milk' },
-    shortDesc: { ko: '추억의 단지 바나나우유', en: 'Iconic jar-shaped banana milk' },
-    priceUSD: 3.0,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['sweet', 'kid-friendly', 'first-timer'],
-    conciergeTags: ['sweet', 'kid-friendly', 'first-timer', 'mood:sweet', 'party:solo'],
-    emoji: '🍌',
-    imageGradient: ['#F4E07A', '#B08B2A']
-  },
-  {
-    id: 'snack-tteok-icecream',
-    slug: 'mochi-icecream',
-    category: 'k-snack',
-    name: { ko: '찹쌀떡 아이스크림', en: 'Mochi Ice Cream' },
-    shortDesc: { ko: '쫄깃한 떡 안에 차가운 아이스', en: 'Chewy rice cake hiding cold cream' },
-    priceUSD: 4.5,
-    spiceLevel: 0,
-    allergens: ['dairy', 'gluten'],
-    dietTags: ['sweet', 'kid-friendly'],
-    conciergeTags: ['sweet', 'kid-friendly', 'mood:sweet', 'party:solo', 'party:duo'],
-    emoji: '🍡',
-    imageGradient: ['#F3D6E0', '#B66A87']
-  },
-
-  // ── 미국 스낵 (us-snack) ──────────────────────────────────────────────
-  {
-    id: 'us-cookie',
-    slug: 'chocolate-chip-cookie',
-    category: 'us-snack',
-    name: { ko: '초콜릿칩 쿠키', en: 'Chocolate Chip Cookie' },
-    shortDesc: { ko: '갓 구운 클래식 쿠키', en: 'Warm, gooey, freshly baked' },
-    priceUSD: 3.5,
-    spiceLevel: 0,
-    allergens: ['dairy', 'egg', 'gluten', 'soy'],
-    dietTags: ['sweet', 'kid-friendly'],
-    conciergeTags: ['sweet', 'kid-friendly', 'mood:sweet', 'party:solo', 'party:group'],
-    emoji: '🍪',
-    imageGradient: ['#C68A5E', '#5E3417']
-  },
-  {
-    id: 'us-pretzel',
-    slug: 'soft-pretzel',
-    category: 'us-snack',
-    name: { ko: '소프트 프레첼', en: 'Soft Pretzel' },
-    shortDesc: { ko: '버터 듬뿍 따뜻한 프레첼', en: 'Buttery, warm, salted twist' },
-    priceUSD: 4.0,
-    spiceLevel: 0,
-    allergens: ['gluten', 'dairy'],
-    dietTags: ['kid-friendly', 'first-timer'],
-    conciergeTags: ['kid-friendly', 'first-timer', 'mood:light', 'party:solo', 'party:group'],
-    emoji: '🥨',
-    imageGradient: ['#D6A36A', '#7A4416']
-  },
-  {
-    id: 'us-popcorn-cheddar',
-    slug: 'cheddar-popcorn',
-    category: 'us-snack',
-    name: { ko: '체다 팝콘', en: 'Cheddar Popcorn' },
-    shortDesc: { ko: '진한 체다치즈 팝콘', en: 'Bold cheddar-coated popcorn' },
-    priceUSD: 3.5,
-    spiceLevel: 0,
-    allergens: ['dairy'],
-    dietTags: ['kid-friendly', 'first-timer'],
-    conciergeTags: ['kid-friendly', 'first-timer', 'mood:light', 'party:group'],
-    emoji: '🧀',
-    imageGradient: ['#F4B655', '#A8631A']
-  },
-  {
-    id: 'us-jerky',
-    slug: 'beef-jerky',
-    category: 'us-snack',
-    name: { ko: '비프 저키', en: 'Beef Jerky' },
-    shortDesc: { ko: '쫄깃하고 진한 풍미', en: 'Slow-smoked, savory beef strips' },
-    priceUSD: 7.5,
-    spiceLevel: 1,
-    allergens: ['beef', 'soy'],
-    dietTags: ['healthy', 'hearty'],
-    conciergeTags: ['healthy', 'hearty', 'mood:adventurous', 'party:solo', 'party:duo'],
-    emoji: '🥩',
-    imageGradient: ['#A86B4A', '#42201A']
-  },
-  {
-    id: 'us-rootbeer',
-    slug: 'root-beer',
-    category: 'us-snack',
-    name: { ko: '루트비어', en: 'Root Beer' },
-    shortDesc: { ko: '시원한 미국식 청량음료', en: 'Classic American soda, ice-cold' },
-    priceUSD: 3.0,
-    spiceLevel: 0,
-    allergens: [],
-    dietTags: ['sweet', 'kid-friendly'],
-    conciergeTags: ['sweet', 'kid-friendly', 'mood:sweet', 'party:solo', 'party:group'],
-    emoji: '🥤',
-    imageGradient: ['#8C5A2E', '#3A1B0F']
-  },
-  {
-    id: 'us-brownie',
-    slug: 'fudge-brownie',
-    category: 'us-snack',
-    name: { ko: '퍼지 브라우니', en: 'Fudge Brownie' },
-    shortDesc: { ko: '진한 초콜릿 브라우니', en: 'Dense, fudgy, deeply chocolatey' },
-    priceUSD: 4.5,
-    spiceLevel: 0,
-    allergens: ['dairy', 'egg', 'gluten', 'soy'],
-    dietTags: ['sweet'],
-    conciergeTags: ['sweet', 'mood:sweet', 'party:solo', 'party:duo'],
-    emoji: '🍫',
-    imageGradient: ['#7A4B2A', '#2A1208'],
-    newItem: true
+    dietTags: ['hearty', 'first-timer', 'kid-friendly'],
+    conciergeTags: ['hearty', 'first-timer', 'kid-friendly', 'mood:hearty', 'mood:sweet', 'party:duo', 'party:group'],
+    emoji: '🍗',
+    imageGradient: ['#F4C46A', '#8A5A1E']
   }
 ];
 

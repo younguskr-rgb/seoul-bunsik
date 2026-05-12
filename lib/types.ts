@@ -26,12 +26,7 @@ export type Mood = 'stress-relief' | 'hearty' | 'light' | 'sweet' | 'adventurous
 
 export type Party = 'solo' | 'duo' | 'group';
 
-export type Category =
-  | 'street-food'
-  | 'bubble-tea'
-  | 'banchan-bento'
-  | 'k-snack'
-  | 'us-snack';
+export type Category = 'street-food';
 
 export type ConciergeTag =
   | DietTag
@@ -89,7 +84,6 @@ export interface MembershipTier {
 }
 
 export type Style = 'healthy' | 'flavor' | 'balanced';
-export type SnackPref = 'k-snack' | 'us-snack' | 'both' | 'none';
 
 export interface ConciergeInput {
   spiceMax: 0 | 1 | 2 | 3 | 4 | 5;
@@ -97,14 +91,9 @@ export interface ConciergeInput {
   mood: Mood;
   party: Party;
   style: Style;
-  snackPref: SnackPref;
 }
 
 export interface Recommendation {
   main: MenuItem;
-  side: MenuItem;
-  drink: MenuItem;
-  kSnack?: MenuItem;
-  usSnack?: MenuItem;
   rationale: LocalizedString;
 }

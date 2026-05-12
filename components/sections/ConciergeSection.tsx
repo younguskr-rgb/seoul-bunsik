@@ -16,7 +16,6 @@ import type {
   Mood,
   Party,
   Recommendation,
-  SnackPref,
   Style
 } from '@/lib/types';
 import { cn } from '@/lib/utils';
@@ -25,7 +24,6 @@ const FILTERS: DietTag[] = ['healthy', 'spicy', 'kid-friendly', 'first-timer', '
 const MOODS: Mood[] = ['stress-relief', 'hearty', 'light', 'sweet', 'adventurous'];
 const PARTIES: Party[] = ['solo', 'duo', 'group'];
 const STYLES: Style[] = ['healthy', 'flavor', 'balanced'];
-const SNACKS: SnackPref[] = ['k-snack', 'us-snack', 'both', 'none'];
 
 const MOOD_EMOJI: Record<Mood, string> = {
   'stress-relief': '🔥',
@@ -38,12 +36,6 @@ const STYLE_EMOJI: Record<Style, string> = {
   healthy: '🥦',
   flavor: '🤤',
   balanced: '⚖️'
-};
-const SNACK_EMOJI: Record<SnackPref, string> = {
-  'k-snack': '🇰🇷',
-  'us-snack': '🇺🇸',
-  both: '🌍',
-  none: '✖️'
 };
 
 export function ConciergeSection() {
@@ -122,8 +114,8 @@ function ChatPanel() {
   );
 }
 
-type Step = 'spice' | 'allergy' | 'party' | 'style' | 'snack' | 'mood' | 'result';
-const STEPS: Step[] = ['spice', 'allergy', 'party', 'style', 'snack', 'mood'];
+type Step = 'spice' | 'allergy' | 'party' | 'style' | 'mood' | 'result';
+const STEPS: Step[] = ['spice', 'allergy', 'party', 'style', 'mood'];
 
 function ConciergeChat() {
   const t = useTranslations('concierge');
@@ -133,7 +125,6 @@ function ConciergeChat() {
   const [allergies, setAllergies] = useState<Allergen[]>([]);
   const [party, setParty] = useState<Party>('duo');
   const [style, setStyle] = useState<Style>('balanced');
-  const [snackPref, setSnackPref] = useState<SnackPref>('none');
   const [mood, setMood] = useState<Mood>('hearty');
   const [result, setResult] = useState<Recommendation | null>(null);
 
@@ -146,8 +137,7 @@ function ConciergeChat() {
         excludeAllergens: allergies,
         mood,
         party,
-        style,
-        snackPref
+        style
       });
       setResult(rec);
       setStep('result');
@@ -301,30 +291,6 @@ function ConciergeChat() {
             </StepWrap>
           )}
 
-          {step === 'snack' && (
-            <StepWrap title={t('step5.title')} subtitle={t('step5.subtitle')}>
-              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-                {SNACKS.map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    aria-pressed={snackPref === s}
-                    onClick={() => setSnackPref(s)}
-                    className={cn(
-                      'rounded-2xl border px-3 py-4 text-sm transition flex flex-col items-center gap-1',
-                      snackPref === s
-                        ? 'border-dahong bg-dahong/10 text-dahong'
-                        : 'border-border bg-card text-muted-fg hover:text-fg'
-                    )}
-                  >
-                    <span aria-hidden className="text-2xl">{SNACK_EMOJI[s]}</span>
-                    <span className="text-[11px] font-medium">{t(`snack.${s}`)}</span>
-                  </button>
-                ))}
-              </div>
-            </StepWrap>
-          )}
-
           {step === 'mood' && (
             <StepWrap title={t('step6.title')}>
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
@@ -357,21 +323,9 @@ function ConciergeChat() {
                 </div>
                 <div className="mt-1">{result.rationale[locale]}</div>
               </div>
-              <div className="grid gap-3 sm:grid-cols-3">
+              <div className="grid gap-3 sm:grid-cols-1">
                 <ResultSlot label={t('result.main')} item={result.main} />
-                <ResultSlot label={t('result.side')} item={result.side} />
-                <ResultSlot label={t('result.drink')} item={result.drink} />
               </div>
-              {(result.kSnack || result.usSnack) && (
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {result.kSnack && (
-                    <ResultSlot label={t('result.kSnack')} item={result.kSnack} />
-                  )}
-                  {result.usSnack && (
-                    <ResultSlot label={t('result.usSnack')} item={result.usSnack} />
-                  )}
-                </div>
-              )}
               <div className="flex flex-wrap gap-2">
                 <Button onClick={() => toast(t('chat.cartAdded'))}>
                   <ShoppingBag className="h-4 w-4" />

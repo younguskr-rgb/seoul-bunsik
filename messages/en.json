@@ -41,14 +41,10 @@
   "menu": {
     "eyebrow": "Menu",
     "title": "Menu Showcase",
-    "subtitle": "5 categories, 60+ dishes. Filter by what you crave.",
+    "subtitle": "25 authentic Korean dishes — filter by what you crave.",
     "spice": "Spice",
     "category": {
-      "street-food": "Street Food & Mains",
-      "bubble-tea": "Bubble Tea",
-      "banchan-bento": "Banchan & Bento",
-      "k-snack": "Korean Snacks",
-      "us-snack": "American Snacks"
+      "street-food": "All dishes"
     },
     "filter": {
       "title": "Taste filters",
@@ -136,21 +132,11 @@
       "title": "What's your style?",
       "subtitle": "Healthy first, or all about the flavor?"
     },
-    "step5": {
-      "title": "Add a snack on the side?",
-      "subtitle": "Korean or American — your call."
-    },
     "step6": { "title": "What's your mood right now?" },
     "style": {
       "healthy": "Healthy first",
       "flavor": "All flavor",
       "balanced": "Balanced"
-    },
-    "snack": {
-      "k-snack": "Korean snack",
-      "us-snack": "American snack",
-      "both": "Both",
-      "none": "No snack"
     },
     "spice": {
       "0": "None",
@@ -174,11 +160,7 @@
     },
     "result": {
       "title": "Today's pick for you",
-      "main": "Main",
-      "side": "Side",
-      "drink": "Drink",
-      "kSnack": "K-snack",
-      "usSnack": "US snack"
+      "main": "Main"
     }
   },
   "membership": {

@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 252 248 240;          /* 미색 cream */
+    --fg: 28 24 22;              /* 먹빛 */
+    --muted: 240 232 220;
+    --muted-fg: 90 80 72;
+    --card: 255 252 246;
+    --card-fg: 28 24 22;
+    --border: 226 215 200;
+    --ring: 200 50 40;
+
+    --dahong: 200 50 40;         /* 다홍 (선홍빛) */
+    --dahong-soft: 232 130 110;
+    --meok: 28 24 22;
+    --misek: 252 248 240;
+    --dancheong-blue: 36 70 120;
+    --dancheong-green: 50 110 80;
+    --dancheong-gold: 196 154 70;
+
+    --radius: 14px;
+  }
+
+  .dark {
+    --bg: 20 18 17;
+    --fg: 246 240 230;
+    --muted: 36 32 30;
+    --muted-fg: 168 156 144;
+    --card: 28 25 23;
+    --card-fg: 246 240 230;
+    --border: 56 48 44;
+    --ring: 220 90 80;
+
+    --dahong: 220 90 80;
+    --dahong-soft: 150 60 50;
+    --meok: 246 240 230;
+    --misek: 28 25 23;
+    --dancheong-blue: 100 140 200;
+    --dancheong-green: 120 180 140;
+    --dancheong-gold: 220 180 100;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    background: rgb(var(--dahong) / 0.25);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--ring));
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .heading-display {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight;
+  }
+  .heading-2 {
+    @apply font-serif text-3xl md:text-4xl font-medium tracking-tight;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-dahong;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

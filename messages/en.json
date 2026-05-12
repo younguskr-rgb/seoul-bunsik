@@ -1,0 +1,266 @@
+{
+  "common": {
+    "brand": "Seoul Bunsik",
+    "tagline": "Eat Together, Happy Together",
+    "taglineLocal": "Eat Together, Happy Together",
+    "language": "Language",
+    "theme": "Theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "comingSoon": "Coming Soon",
+    "nav": {
+      "menu": "Menu",
+      "concierge": "Concierge",
+      "membership": "Membership",
+      "visit": "Visit"
+    },
+    "cta": {
+      "orderNow": "Order Now",
+      "viewMenu": "View Menu",
+      "getRecommendation": "Get Today's Pick",
+      "viewAll": "View All"
+    }
+  },
+  "hero": {
+    "eyebrow": "Dracut, Massachusetts",
+    "title": "A bite of Seoul,\nright in Dracut.",
+    "subtitle": "From street food and bubble tea to banchan and bento — let our concierge pick something perfect for you.",
+    "stat": {
+      "years": "Authentic Korean Recipes",
+      "menus": "60+ Signature Items",
+      "koUs": "Korean × American Curation"
+    }
+  },
+  "story": {
+    "eyebrow": "Our Story",
+    "title": "From a Seoul alley\nto your Dracut table.",
+    "body1": "The warmth of the tteokbokki shop outside the school gate — that's the feeling we wanted to bring to Dracut. Hand-rolled kimbap, fresh-stirred rice cakes, and bubble tea brewed to order.",
+    "body2": "A new discovery for our American neighbors, a familiar comfort for Korean families — that's why our promise is simple.",
+    "highlight": "Eat together, happy together."
+  },
+  "menu": {
+    "eyebrow": "Menu",
+    "title": "Menu Showcase",
+    "subtitle": "5 categories, 60+ dishes. Filter by what you crave.",
+    "spice": "Spice",
+    "category": {
+      "street-food": "Street Food & Mains",
+      "bubble-tea": "Bubble Tea",
+      "banchan-bento": "Banchan & Bento",
+      "k-snack": "Korean Snacks",
+      "us-snack": "American Snacks"
+    },
+    "filter": {
+      "title": "Taste filters",
+      "healthy": "Healthy",
+      "spicy": "Looks Spicy",
+      "kid-friendly": "Kid-Friendly",
+      "first-timer": "First Timer",
+      "hearty": "Hearty Meal",
+      "sweet": "Sweet Treat",
+      "vegetarian": "Vegetarian",
+      "clear": "Clear filters",
+      "empty": "No items match. Try removing a filter."
+    },
+    "badge": {
+      "popular": "Popular",
+      "new": "New",
+      "comingSoon": "Soon"
+    },
+    "allergen": {
+      "gluten": "Gluten",
+      "dairy": "Dairy",
+      "peanut": "Peanut",
+      "tree-nut": "Tree Nut",
+      "soy": "Soy",
+      "egg": "Egg",
+      "shellfish": "Shellfish",
+      "pork": "Pork",
+      "beef": "Beef",
+      "sesame": "Sesame"
+    }
+  },
+  "bubble": {
+    "eyebrow": "Build Your Own",
+    "title": "Build Your Bubble Tea",
+    "subtitle": "From base to toppings — craft yours in 4 quick steps.",
+    "price": "Estimated price",
+    "step": {
+      "base": "Base",
+      "flavor": "Flavor",
+      "toppings": "Toppings (multi-select)",
+      "sweetness": "Sweetness",
+      "ice": "Ice"
+    },
+    "cta": {
+      "recommend": "Show me similar drinks"
+    },
+    "preview": {
+      "empty": "Pick your options"
+    }
+  },
+  "banchan": {
+    "eyebrow": "Banchan",
+    "title": "The soul of every\nKorean table.",
+    "subtitle": "Eight banchan made fresh each morning — three included with every bento, extras from $3.50.",
+    "freeBadge": "3 free with bento",
+    "todayPick": "Today's banchan",
+    "viewAll": "View all banchan",
+    "comboCta": "Order the banchan platter"
+  },
+  "concierge": {
+    "eyebrow": "Personal Concierge",
+    "title": "What should I eat today?\nLet your bunsik butler decide.",
+    "subtitle": "Pick instantly with taste tags, or follow our 4-step chat guide.",
+    "tab": {
+      "tags": "Quick tags",
+      "chat": "Chat guide"
+    },
+    "chat": {
+      "greeting": "Hi! What kind of meal are you in the mood for?",
+      "step": "Step",
+      "of": "of",
+      "next": "Next",
+      "back": "Back",
+      "restart": "Start over",
+      "addToCart": "Add to cart",
+      "cartAdded": "Your pick has been added to the cart!"
+    },
+    "step1": { "title": "How much spice do you like?" },
+    "step2": {
+      "title": "Any allergies to avoid?",
+      "subtitle": "Select all that apply."
+    },
+    "step3": { "title": "How many of you tonight?" },
+    "step4": {
+      "title": "What's your style?",
+      "subtitle": "Healthy first, or all about the flavor?"
+    },
+    "step5": {
+      "title": "Add a snack on the side?",
+      "subtitle": "Korean or American — your call."
+    },
+    "step6": { "title": "What's your mood right now?" },
+    "style": {
+      "healthy": "Healthy first",
+      "flavor": "All flavor",
+      "balanced": "Balanced"
+    },
+    "snack": {
+      "k-snack": "Korean snack",
+      "us-snack": "American snack",
+      "both": "Both",
+      "none": "No snack"
+    },
+    "spice": {
+      "0": "None",
+      "1": "Mild",
+      "2": "A little",
+      "3": "Medium",
+      "4": "Hot",
+      "5": "Inferno"
+    },
+    "party": {
+      "solo": "Solo",
+      "duo": "Two of us",
+      "group": "A group"
+    },
+    "mood": {
+      "stress-relief": "Stressed out",
+      "hearty": "Hearty & filling",
+      "light": "Light bite",
+      "sweet": "Something sweet",
+      "adventurous": "First-time adventure"
+    },
+    "result": {
+      "title": "Today's pick for you",
+      "main": "Main",
+      "side": "Side",
+      "drink": "Drink",
+      "kSnack": "K-snack",
+      "usSnack": "US snack"
+    }
+  },
+  "membership": {
+    "eyebrow": "Membership",
+    "title": "Regulars Membership",
+    "subtitle": "The more you visit, the warmer the perks.",
+    "points": "pts",
+    "pointsTo": "to next tier",
+    "join": "Notify me at launch",
+    "demoNotice": "Design preview — will be replaced with real signup at launch.",
+    "tier": {
+      "featured": "Featured",
+      "bites": { "name": "Sprout" },
+      "seoul": { "name": "Stepper" },
+      "royal": { "name": "Regular" }
+    },
+    "email": {
+      "placeholder": "you@example.com",
+      "success": "We'll let you know first thing!",
+      "error": "Please enter a valid email."
+    }
+  },
+  "payment": {
+    "eyebrow": "Frictionless Checkout",
+    "title": "Pay your way",
+    "subtitle": "In-store, on your phone, or a quick QR — coming soon.",
+    "openQr": "Preview QR checkout",
+    "card": {
+      "title": "In-store card",
+      "desc": "Visa · MasterCard · Amex · Apple Pay · Google Pay"
+    },
+    "mobile": {
+      "title": "Mobile pay",
+      "desc": "KakaoPay · TossPay · Samsung Pay"
+    },
+    "qr": {
+      "title": "One tap with QR",
+      "desc": "Scan at the table — order, pay, earn points."
+    },
+    "qrModal": {
+      "title": "QR checkout, launching soon",
+      "body": "Order, pay, and earn points with a single scan. Get notified at launch."
+    }
+  },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "title": "What regulars are saying",
+    "subtitle": "Real reviews from Google, Yelp, and KakaoMap.",
+    "disclaimer": "* Sample reviews for design preview."
+  },
+  "location": {
+    "eyebrow": "Visit Us",
+    "title": "Find us",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Hours",
+    "directions": "Get directions",
+    "callNow": "Call now",
+    "closed": "Closed",
+    "day": {
+      "0": "Sun",
+      "1": "Mon",
+      "2": "Tue",
+      "3": "Wed",
+      "4": "Thu",
+      "5": "Fri",
+      "6": "Sat"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked"
+  },
+  "cta": {
+    "title": "See you tonight\nat Seoul Bunsik.",
+    "subtitle": "Order now, drop by, or join the regulars list.",
+    "newsletter": "Get the newsletter",
+    "newsletterPlaceholder": "Email address",
+    "newsletterCta": "Subscribe"
+  },
+  "footer": {
+    "madeIn": "Made with ♥ in Dracut, MA",
+    "copy": "© {year} Seoul Bunsik. All rights reserved."
+  }
+}

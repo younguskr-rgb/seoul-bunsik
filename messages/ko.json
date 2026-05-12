@@ -1,0 +1,266 @@
+{
+  "common": {
+    "brand": "서울분식",
+    "tagline": "Eat Together, Happy Together",
+    "taglineLocal": "함께 먹고, 함께 행복해요",
+    "language": "언어",
+    "theme": "테마",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기",
+    "comingSoon": "곧 출시",
+    "nav": {
+      "menu": "메뉴",
+      "concierge": "추천받기",
+      "membership": "멤버십",
+      "visit": "방문"
+    },
+    "cta": {
+      "orderNow": "지금 주문하기",
+      "viewMenu": "메뉴 보기",
+      "getRecommendation": "오늘의 추천 받기",
+      "viewAll": "전체 보기"
+    }
+  },
+  "hero": {
+    "eyebrow": "Dracut, Massachusetts",
+    "title": "드라컷에서 만나는\n서울의 한 입",
+    "subtitle": "분식부터 버블티, 반찬과 도시락까지 — 당신의 취향에 맞춰드리는 분식 집사가 함께합니다.",
+    "stat": {
+      "years": "정통 한식 레시피",
+      "menus": "60+ 시그니처 메뉴",
+      "koUs": "한·미 융합 큐레이션"
+    }
+  },
+  "story": {
+    "eyebrow": "Our Story",
+    "title": "서울의 골목,\n드라컷의 식탁 위로",
+    "body1": "어릴 적 학교 앞 떡볶이집의 따뜻함, 그 시절 서울의 분식집을 그대로 옮겨왔습니다. 매일 손으로 빚는 김밥과 갓 만든 떡볶이, 그리고 갓 내린 버블티까지.",
+    "body2": "현지 미국 친구들에게는 새로운 발견을, 한인 가족들에게는 그리운 위로를 — 그래서 우리의 약속은 단 하나입니다.",
+    "highlight": "함께 먹고, 함께 행복해요."
+  },
+  "menu": {
+    "eyebrow": "Menu",
+    "title": "메뉴 쇼케이스",
+    "subtitle": "5개 카테고리, 60+ 메뉴. 태그로 골라보세요.",
+    "spice": "매움도",
+    "category": {
+      "street-food": "분식 & 메인",
+      "bubble-tea": "버블티",
+      "banchan-bento": "반찬 & 도시락",
+      "k-snack": "한국 스낵",
+      "us-snack": "미국 스낵"
+    },
+    "filter": {
+      "title": "취향 필터",
+      "healthy": "건강·다이어트",
+      "spicy": "매워보이는 것",
+      "kid-friendly": "아이들 메뉴",
+      "first-timer": "처음이에요",
+      "hearty": "푸짐한 한끼",
+      "sweet": "달콤한 디저트",
+      "vegetarian": "베지테리안",
+      "clear": "필터 초기화",
+      "empty": "조건에 맞는 메뉴가 없어요. 필터를 줄여보세요."
+    },
+    "badge": {
+      "popular": "인기",
+      "new": "신메뉴",
+      "comingSoon": "곧 출시"
+    },
+    "allergen": {
+      "gluten": "글루텐",
+      "dairy": "유제품",
+      "peanut": "땅콩",
+      "tree-nut": "견과류",
+      "soy": "대두",
+      "egg": "계란",
+      "shellfish": "해산물",
+      "pork": "돼지고기",
+      "beef": "소고기",
+      "sesame": "참깨"
+    }
+  },
+  "bubble": {
+    "eyebrow": "Build Your Own",
+    "title": "나만의 버블티 만들기",
+    "subtitle": "베이스부터 토핑까지, 4단계로 완성하세요.",
+    "price": "예상 가격",
+    "step": {
+      "base": "베이스",
+      "flavor": "맛",
+      "toppings": "토핑 (다중 선택)",
+      "sweetness": "당도",
+      "ice": "얼음"
+    },
+    "cta": {
+      "recommend": "이 조합 추천 메뉴 보기"
+    },
+    "preview": {
+      "empty": "옵션을 골라보세요"
+    }
+  },
+  "banchan": {
+    "eyebrow": "Banchan",
+    "title": "한국 식탁의 영혼,\n반찬 한 상",
+    "subtitle": "매일 아침 손수 만드는 8가지 반찬 — 도시락엔 3종 기본 제공, 추가는 한 가지당 $3.5부터.",
+    "freeBadge": "도시락 3종 기본",
+    "todayPick": "오늘의 반찬",
+    "viewAll": "전체 반찬 보기",
+    "comboCta": "반찬 한 상 주문하기"
+  },
+  "concierge": {
+    "eyebrow": "Personal Concierge",
+    "title": "오늘 뭐 먹지?\n분식 집사가 골라드릴게요.",
+    "subtitle": "필터로 즉시 고르거나, 4단계 챗봇 가이드를 따라가보세요.",
+    "tab": {
+      "tags": "태그로 빠르게",
+      "chat": "챗봇 가이드"
+    },
+    "chat": {
+      "greeting": "안녕하세요! 오늘은 어떤 식사를 원하세요?",
+      "step": "단계",
+      "of": "/",
+      "next": "다음",
+      "back": "이전",
+      "restart": "다시 추천받기",
+      "addToCart": "장바구니에 담기",
+      "cartAdded": "추천 메뉴가 장바구니에 담겼어요!"
+    },
+    "step1": { "title": "매운맛, 얼마나 좋아하세요?" },
+    "step2": {
+      "title": "피해야 할 알레르기가 있나요?",
+      "subtitle": "여러 개 선택할 수 있어요."
+    },
+    "step3": { "title": "오늘 몇 분이서 드세요?" },
+    "step4": {
+      "title": "어떤 스타일이 좋으세요?",
+      "subtitle": "건강 위주, 맛 위주 — 무엇을 우선할까요?"
+    },
+    "step5": {
+      "title": "스낵도 함께 드릴까요?",
+      "subtitle": "한국 / 미국 과자 — 골라보세요."
+    },
+    "step6": { "title": "지금 기분은 어떠세요?" },
+    "style": {
+      "healthy": "건강식 위주",
+      "flavor": "맛 위주",
+      "balanced": "균형"
+    },
+    "snack": {
+      "k-snack": "한국 스낵",
+      "us-snack": "미국 스낵",
+      "both": "둘 다",
+      "none": "스낵 없이"
+    },
+    "spice": {
+      "0": "안 매워요",
+      "1": "순한맛",
+      "2": "약간",
+      "3": "보통",
+      "4": "매워요",
+      "5": "지옥불"
+    },
+    "party": {
+      "solo": "혼밥",
+      "duo": "둘이서",
+      "group": "여럿이"
+    },
+    "mood": {
+      "stress-relief": "스트레스 폭발",
+      "hearty": "푸짐하게",
+      "light": "가볍게",
+      "sweet": "달콤하게",
+      "adventurous": "처음 도전"
+    },
+    "result": {
+      "title": "오늘의 추천",
+      "main": "메인",
+      "side": "사이드",
+      "drink": "음료",
+      "kSnack": "한국 스낵",
+      "usSnack": "미국 스낵"
+    }
+  },
+  "membership": {
+    "eyebrow": "Membership",
+    "title": "단골 멤버십",
+    "subtitle": "더 자주 오실수록, 더 따뜻한 혜택을 드려요.",
+    "points": "pts",
+    "pointsTo": "다음 등급까지",
+    "join": "출시 알림 받기",
+    "demoNotice": "데모 화면입니다. 출시 전 실제 서비스로 교체될 예정입니다.",
+    "tier": {
+      "featured": "추천",
+      "bites": { "name": "떡잎" },
+      "seoul": { "name": "한걸음" },
+      "royal": { "name": "단골" }
+    },
+    "email": {
+      "placeholder": "you@example.com",
+      "success": "출시되면 가장 먼저 알려드릴게요!",
+      "error": "올바른 이메일을 입력해주세요."
+    }
+  },
+  "payment": {
+    "eyebrow": "Frictionless Checkout",
+    "title": "빠르고 다양한 결제",
+    "subtitle": "현장에서, 모바일에서, QR 한 번으로. 곧 출시됩니다.",
+    "openQr": "QR 결제 미리보기",
+    "card": {
+      "title": "현장 카드 결제",
+      "desc": "Visa · MasterCard · Amex · Apple Pay · Google Pay"
+    },
+    "mobile": {
+      "title": "모바일 결제",
+      "desc": "KakaoPay · TossPay · Samsung Pay"
+    },
+    "qr": {
+      "title": "QR 한 번으로",
+      "desc": "테이블에서 스캔, 바로 결제와 적립까지."
+    },
+    "qrModal": {
+      "title": "QR 결제, 곧 출시",
+      "body": "테이블 QR로 주문·결제·적립이 한 번에 이뤄집니다. 출시 알림을 받아보세요."
+    }
+  },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "title": "단골들의 한 마디",
+    "subtitle": "Google · Yelp · 카카오맵에서 받은 진짜 후기들.",
+    "disclaimer": "* 디자인 미리보기용 샘플 후기입니다."
+  },
+  "location": {
+    "eyebrow": "Visit Us",
+    "title": "찾아오시는 길",
+    "addressLabel": "주소",
+    "phoneLabel": "전화",
+    "hoursLabel": "영업시간",
+    "directions": "길찾기",
+    "callNow": "전화하기",
+    "closed": "휴무",
+    "day": {
+      "0": "일",
+      "1": "월",
+      "2": "화",
+      "3": "수",
+      "4": "목",
+      "5": "금",
+      "6": "토"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "자주 묻는 질문"
+  },
+  "cta": {
+    "title": "오늘 저녁,\n서울분식에서 만나요.",
+    "subtitle": "지금 주문하거나, 방문하거나, 단골 알림을 받아보세요.",
+    "newsletter": "뉴스레터 받기",
+    "newsletterPlaceholder": "이메일 주소",
+    "newsletterCta": "구독하기"
+  },
+  "footer": {
+    "madeIn": "Made with ♥ in Dracut, MA",
+    "copy": "© {year} 서울분식. All rights reserved."
+  }
+}

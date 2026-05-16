@@ -209,5 +209,32 @@
   "footer": {
     "madeIn": "Made with ♥ in Dracut, MA",
     "copy": "© {year} Seoul Bunsik. All rights reserved."
+  },
+  "auth": {
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "account": "My account",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Log in with your email and password.",
+    "signupTitle": "Join Seoul Bunsik",
+    "signupSubtitle": "Create an account with your email.",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "you@example.com",
+    "passwordPlaceholder": "••••••••",
+    "passwordHint": "Use at least 6 characters.",
+    "submitLogin": "Log in",
+    "submitSignup": "Create account",
+    "pending": "Please wait…",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "confirmTitle": "Check your email",
+    "confirmBody": "Click the confirmation link we sent to finish signing up.",
+    "callbackError": "Verification failed. Please try again.",
+    "accountTitle": "My account",
+    "signedInAs": "Signed in as",
+    "memberSince": "Member since",
+    "backHome": "Back to home"
   }
 }

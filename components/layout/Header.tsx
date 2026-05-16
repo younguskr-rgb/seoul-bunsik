@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet } from '@/components/ui/sheet';
 import { LanguageToggle } from './LanguageToggle';
 import { ThemeToggle } from './ThemeToggle';
+import { AuthButtons } from './AuthButtons';
 import { Logo } from './Logo';
 import { cn } from '@/lib/utils';
 import { business } from '@/data/business';
@@ -66,6 +67,9 @@ export function Header() {
         <div className="flex items-center gap-2">
           <LanguageToggle className="hidden sm:inline-flex" />
           <ThemeToggle className="hidden sm:inline-flex" />
+          <div className="hidden md:flex">
+            <AuthButtons />
+          </div>
           <a
             href={business.socials.doordash}
             target="_blank"
@@ -104,6 +108,12 @@ export function Header() {
           <div className="mt-4 flex items-center justify-between gap-2">
             <LanguageToggle />
             <ThemeToggle />
+          </div>
+          <div className="mt-4 border-t border-border pt-4">
+            <AuthButtons
+              variant="stacked"
+              onNavigate={() => setMobileOpen(false)}
+            />
           </div>
           <a
             href={business.socials.doordash}

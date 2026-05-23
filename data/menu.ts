@@ -120,7 +120,7 @@ export const menu: MenuItem[] = [
     priceUSD: 20.99,
     spiceLevel: 1,
     allergens: ['soy', 'sesame'],
-    dietTags: ['hearty', 'first-timer'],
+    dietTags: ['hearty', 'first-timer', 'diabetic-friendly', 'low-sugar'],
     conciergeTags: ['hearty', 'first-timer', 'mood:hearty', 'party:solo', 'party:duo'],
     emoji: '🍗',
     imageGradient: ['#F4C56A', '#8A5A1E']
@@ -293,7 +293,7 @@ export const menu: MenuItem[] = [
     priceUSD: 16.99,
     spiceLevel: 3,
     allergens: ['pork', 'shellfish', 'soy', 'egg'],
-    dietTags: ['hearty', 'spicy'],
+    dietTags: ['hearty', 'spicy', 'diabetic-friendly', 'low-sugar'],
     conciergeTags: ['hearty', 'spicy', 'mood:hearty', 'mood:stress-relief', 'party:solo', 'party:duo'],
     emoji: '🍲',
     imageGradient: ['#E26A4A', '#6E1F14']

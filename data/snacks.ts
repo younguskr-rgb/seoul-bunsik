@@ -1,6 +1,6 @@
-import type { Allergen, DietTag, LocalizedString } from '@/lib/types';
+import type { Allergen, DietTag, LocalizedString, SnackRegion } from '@/lib/types';
 
-export type SnackRegion = 'us' | 'kr' | 'world';
+export type { SnackRegion };
 export type SnackCategory =
   | 'snack'
   | 'chocolate'

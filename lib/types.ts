@@ -100,6 +100,9 @@ export interface Recommendation {
   rationale: LocalizedString;
 }
 
+/** 스낵 원산지 권역. data/snacks.ts 가 이 타입을 재export 한다. */
+export type SnackRegion = 'us' | 'kr' | 'world';
+
 export type RecoMode = 'diabetes' | 'kids' | 'healthy-snack' | 'flavor';
 
 /** 메뉴와 스낵을 통합한 추천 후보/결과 단위. 클라이언트로도 그대로 전달된다. */
@@ -113,8 +116,8 @@ export interface RecoItem {
   emoji?: string;
   imageGradient?: [string, string];
   priceUSD?: number; // 메뉴만
-  spiceLevel?: number; // 메뉴만 (스낵은 undefined)
-  region?: 'us' | 'kr' | 'world'; // 스낵만
+  spiceLevel?: 0 | 1 | 2 | 3 | 4 | 5; // 메뉴만 (스낵은 undefined)
+  region?: SnackRegion; // 스낵만
   popular?: boolean;
 }
 

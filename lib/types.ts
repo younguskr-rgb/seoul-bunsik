@@ -20,7 +20,9 @@ export type DietTag =
   | 'hearty'
   | 'sweet'
   | 'first-timer'
-  | 'spicy';
+  | 'spicy'
+  | 'diabetic-friendly'
+  | 'low-sugar';
 
 export type Mood = 'stress-relief' | 'hearty' | 'light' | 'sweet' | 'adventurous';
 
@@ -96,4 +98,28 @@ export interface ConciergeInput {
 export interface Recommendation {
   main: MenuItem;
   rationale: LocalizedString;
+}
+
+export type RecoMode = 'diabetes' | 'kids' | 'healthy-snack' | 'flavor';
+
+/** 메뉴와 스낵을 통합한 추천 후보/결과 단위. 클라이언트로도 그대로 전달된다. */
+export interface RecoItem {
+  kind: 'menu' | 'snack';
+  id: string;
+  name: LocalizedString;
+  shortDesc: LocalizedString;
+  allergens: Allergen[];
+  dietTags: DietTag[];
+  emoji?: string;
+  imageGradient?: [string, string];
+  priceUSD?: number; // 메뉴만
+  spiceLevel?: number; // 메뉴만 (스낵은 undefined)
+  region?: 'us' | 'kr' | 'world'; // 스낵만
+  popular?: boolean;
+}
+
+export interface RecoResult {
+  items: RecoItem[];
+  rationale: string; // 현재 locale 1개 언어
+  disclaimer?: string; // 당뇨 모드에서만 채워짐
 }

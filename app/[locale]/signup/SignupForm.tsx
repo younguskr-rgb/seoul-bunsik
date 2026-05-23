@@ -58,7 +58,7 @@ export function SignupForm({ locale }: { locale: string }) {
           type="password"
           name="password"
           required
-          minLength={6}
+          minLength={8}
           autoComplete="new-password"
           placeholder={t('passwordPlaceholder')}
           className={inputClass}

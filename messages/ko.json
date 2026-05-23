@@ -223,7 +223,7 @@
     "password": "비밀번호",
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "••••••••",
-    "passwordHint": "6자 이상 입력해주세요.",
+    "passwordHint": "8자 이상 입력해주세요.",
     "submitLogin": "로그인",
     "submitSignup": "가입하기",
     "pending": "처리 중…",

@@ -223,7 +223,7 @@
     "password": "Password",
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "••••••••",
-    "passwordHint": "Use at least 6 characters.",
+    "passwordHint": "Use at least 8 characters.",
     "submitLogin": "Log in",
     "submitSignup": "Create account",
     "pending": "Please wait…",

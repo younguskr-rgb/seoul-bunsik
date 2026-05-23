@@ -52,8 +52,8 @@ export async function signUp(formData: FormData): Promise<AuthState> {
   if (!email || !password) {
     return { error: '이메일과 비밀번호를 모두 입력해주세요.' };
   }
-  if (password.length < 6) {
-    return { error: '비밀번호는 6자 이상이어야 합니다.' };
+  if (password.length < 8) {
+    return { error: '비밀번호는 8자 이상이어야 합니다.' };
   }
 
   const origin = (await headers()).get('origin') ?? '';

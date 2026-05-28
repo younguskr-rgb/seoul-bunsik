@@ -34,7 +34,7 @@ export function ShareLikeActions({
   return (
     <div
       className={cn(
-        'absolute z-10 flex gap-1 opacity-100 transition-opacity md:opacity-60 md:group-hover:opacity-100 md:group-focus-within:opacity-100',
+        'absolute z-10 flex gap-1',
         position === 'corner' ? 'right-2 top-2' : 'right-4 top-4'
       )}
     >

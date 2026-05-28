@@ -7,3 +7,6 @@ out
 next-env.d.ts
 
 .vercel
+
+# Superpowers Visual Companion mockups + state
+.superpowers/

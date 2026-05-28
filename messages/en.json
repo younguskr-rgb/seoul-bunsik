@@ -46,6 +46,41 @@
     "category": {
       "street-food": "All dishes"
     },
+    "hero": {
+      "location": "Dracut, MA · Korean Street Food",
+      "brand": "서울분식",
+      "brandEn": "SEOUL BUNSIK",
+      "lead": "Honest flavors from Korea's alleyways — hand-folded dumplings, fiery stews, well-marinated galbi. All 25 dishes on a single page.",
+      "stat": {
+        "menus": "Menus",
+        "categories": "Categories",
+        "spice": "Spice levels 0–5 noted"
+      }
+    },
+    "legend": {
+      "popular": "Popular item",
+      "spice": "Spice scale (higher = spicier)",
+      "icon": "= Category icon"
+    },
+    "section": {
+      "mandu": "만두",
+      "manduEn": "Dumplings",
+      "mains": "불고기 · Mains",
+      "mainsEn": "Bulgogi & Mains",
+      "rice-noodle-stew": "Rice · Noodle · Stew",
+      "rice-noodle-stewEn": "Rice · Noodles · Stews",
+      "galbi-tangsuyuk": "갈비 · 탕수육",
+      "galbi-tangsuyukEn": "Galbi & Tangsuyuk",
+      "count": "{count} items"
+    },
+    "footerStripe": "SEOUL BUNSIK · Dracut, MA · 25 dishes · Prices in USD",
+    "actions": {
+      "share": "Share",
+      "like": "Like",
+      "liked": "Unlike",
+      "copied": "Link copied",
+      "copyFailed": "Copy failed"
+    },
     "filter": {
       "title": "Taste filters",
       "healthy": "Healthy",

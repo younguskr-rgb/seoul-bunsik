@@ -46,6 +46,41 @@
     "category": {
       "street-food": "전체 메뉴"
     },
+    "hero": {
+      "location": "Dracut, MA · Korean Street Food",
+      "brand": "서울분식",
+      "brandEn": "SEOUL BUNSIK",
+      "lead": "대한민국 골목의 정직한 맛 — 손으로 빚은 만두, 매콤한 국물, 잘 익힌 갈비. 25가지 메뉴를 한 장에 담았습니다.",
+      "stat": {
+        "menus": "메뉴",
+        "categories": "카테고리",
+        "spice": "매운맛 0–5 단계 표기"
+      }
+    },
+    "legend": {
+      "popular": "인기 메뉴",
+      "spice": "매운맛 단계 (점수가 높을수록 매움)",
+      "icon": "= 카테고리 아이콘"
+    },
+    "section": {
+      "mandu": "만두",
+      "manduEn": "Dumplings",
+      "mains": "불고기 · 메인",
+      "mainsEn": "Bulgogi & Mains",
+      "rice-noodle-stew": "밥 · 면 · 찌개",
+      "rice-noodle-stewEn": "Rice · Noodles · Stews",
+      "galbi-tangsuyuk": "갈비 · 탕수육",
+      "galbi-tangsuyukEn": "Galbi & Tangsuyuk",
+      "count": "{count}종"
+    },
+    "footerStripe": "SEOUL BUNSIK · Dracut, MA · 25 메뉴 · 가격은 USD",
+    "actions": {
+      "share": "공유",
+      "like": "좋아요",
+      "liked": "좋아요 취소",
+      "copied": "링크가 복사됐어요",
+      "copyFailed": "복사 실패"
+    },
     "filter": {
       "title": "취향 필터",
       "healthy": "건강·다이어트",

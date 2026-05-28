@@ -1,6 +1,6 @@
-import type { Allergen, LocalizedString } from '@/lib/types';
+import type { Allergen, DietTag, LocalizedString, SnackRegion } from '@/lib/types';
 
-export type SnackRegion = 'us' | 'kr' | 'world';
+export type { SnackRegion };
 export type SnackCategory =
   | 'snack'
   | 'chocolate'
@@ -20,6 +20,7 @@ export interface Snack {
   shortDesc: LocalizedString;
   momPick: LocalizedString;
   allergens: Allergen[];
+  dietTags: DietTag[];
   emoji: string;
   imageGradient: [string, string];
   popular?: boolean;
@@ -43,6 +44,7 @@ export const snacks: Snack[] = [
       en: 'USDA organic, no artificial colors or flavors.'
     },
     allergens: ['gluten', 'dairy', 'soy'],
+    dietTags: ['kid-friendly'],
     emoji: '🐰',
     imageGradient: ['#F4B266', '#A85E1E'],
     popular: true
@@ -63,6 +65,7 @@ export const snacks: Snack[] = [
       en: 'Just 5 whole ingredients — no additives, gluten-free.'
     },
     allergens: ['egg', 'tree-nut'],
+    dietTags: ['healthy'],
     emoji: '🍫',
     imageGradient: ['#3A2A1E', '#0E0806']
   },
@@ -82,6 +85,7 @@ export const snacks: Snack[] = [
       en: 'Vitamins A·C·E, gluten-free, fat-free.'
     },
     allergens: [],
+    dietTags: ['kid-friendly', 'sweet'],
     emoji: '🍇',
     imageGradient: ['#A23A8E', '#4A0E3A']
   },
@@ -101,6 +105,7 @@ export const snacks: Snack[] = [
       en: 'Popped in organic coconut oil — no canola.'
     },
     allergens: [],
+    dietTags: ['healthy', 'low-sugar', 'diabetic-friendly', 'kid-friendly'],
     emoji: '🍿',
     imageGradient: ['#F0E3B8', '#A88A3A']
   },
@@ -120,6 +125,7 @@ export const snacks: Snack[] = [
       en: 'Just apples — never fried, no added sugar.'
     },
     allergens: [],
+    dietTags: ['healthy', 'low-sugar', 'kid-friendly'],
     emoji: '🍎',
     imageGradient: ['#E26A4A', '#8A1F14']
   },
@@ -139,6 +145,7 @@ export const snacks: Snack[] = [
       en: 'A classic occasional treat — share one cup at a time.'
     },
     allergens: ['peanut', 'dairy', 'soy'],
+    dietTags: ['sweet'],
     emoji: '🥜',
     imageGradient: ['#E89A3A', '#6A2E0A'],
     popular: true
@@ -159,6 +166,7 @@ export const snacks: Snack[] = [
       en: 'USDA organic, no HFCS or artificial sweeteners.'
     },
     allergens: [],
+    dietTags: ['kid-friendly'],
     emoji: '🧃',
     imageGradient: ['#F4C46A', '#8A5A1E']
   },
@@ -178,6 +186,7 @@ export const snacks: Snack[] = [
       en: 'Real-brewed tea, no artificial flavors or preservatives.'
     },
     allergens: [],
+    dietTags: ['sweet'],
     emoji: '🍑',
     imageGradient: ['#F4A07A', '#C84E2A']
   },
@@ -199,6 +208,7 @@ export const snacks: Snack[] = [
       en: 'Real shrimp powder for the unmistakable umami.'
     },
     allergens: ['gluten', 'shellfish', 'soy'],
+    dietTags: ['kid-friendly'],
     emoji: '🦐',
     imageGradient: ['#F4C266', '#A8662A'],
     popular: true
@@ -219,6 +229,7 @@ export const snacks: Snack[] = [
       en: 'The treat behind Korea\'s 11/11 Pepero Day.'
     },
     allergens: ['gluten', 'dairy', 'soy'],
+    dietTags: ['sweet'],
     emoji: '🍫',
     imageGradient: ['#5A2E18', '#1A0E08'],
     popular: true
@@ -239,6 +250,7 @@ export const snacks: Snack[] = [
       en: "One bag, one new friend — the Korean way of sharing."
     },
     allergens: ['gluten', 'dairy', 'soy', 'egg'],
+    dietTags: ['sweet'],
     emoji: '🥮',
     imageGradient: ['#7A3A18', '#2A1208']
   },
@@ -258,6 +270,7 @@ export const snacks: Snack[] = [
       en: 'The chip that kicked off Korea\'s honey-butter craze.'
     },
     allergens: ['dairy'],
+    dietTags: ['sweet'],
     emoji: '🍯',
     imageGradient: ['#F4D86A', '#A88A3A']
   },
@@ -277,6 +290,7 @@ export const snacks: Snack[] = [
       en: 'Quadruple the crunch — a new Korean classic.'
     },
     allergens: ['gluten', 'soy'],
+    dietTags: ['kid-friendly'],
     emoji: '🐢',
     imageGradient: ['#A8783A', '#4A2E10']
   },
@@ -296,6 +310,7 @@ export const snacks: Snack[] = [
       en: 'Whole-wheat puffs — great in milk too.'
     },
     allergens: ['gluten'],
+    dietTags: ['kid-friendly', 'healthy'],
     emoji: '🌾',
     imageGradient: ['#E8C46A', '#8A5A1E']
   },
@@ -315,6 +330,7 @@ export const snacks: Snack[] = [
       en: 'A bathhouse classic since 1974.'
     },
     allergens: ['dairy'],
+    dietTags: ['kid-friendly', 'sweet'],
     emoji: '🍌',
     imageGradient: ['#F4D86A', '#C4983A'],
     popular: true
@@ -335,6 +351,7 @@ export const snacks: Snack[] = [
       en: 'Caffeine-free, gently creamy.'
     },
     allergens: ['dairy'],
+    dietTags: ['sweet'],
     emoji: '🥛',
     imageGradient: ['#E8D4F4', '#7A5AA8']
   },
@@ -356,6 +373,7 @@ export const snacks: Snack[] = [
       en: 'Try the Tim Tam Slam — sip hot milk through it.'
     },
     allergens: ['gluten', 'dairy', 'soy', 'egg'],
+    dietTags: ['sweet'],
     emoji: '🍪',
     imageGradient: ['#5A2E18', '#1A0E08'],
     popular: true
@@ -376,6 +394,7 @@ export const snacks: Snack[] = [
       en: 'Real matcha powder — gently bitter, smooth finish.'
     },
     allergens: ['gluten', 'dairy', 'soy'],
+    dietTags: ['sweet'],
     emoji: '🍵',
     imageGradient: ['#7AA86A', '#2E4A1A']
   },
@@ -395,6 +414,7 @@ export const snacks: Snack[] = [
       en: 'Made with Uji matcha from Kyoto.'
     },
     allergens: ['gluten', 'dairy', 'soy'],
+    dietTags: ['sweet'],
     emoji: '🟢',
     imageGradient: ['#A8C46A', '#4A6A1A']
   },
@@ -414,6 +434,7 @@ export const snacks: Snack[] = [
       en: 'Real fruit flavors, gluten-free, fat-free.'
     },
     allergens: [],
+    dietTags: ['kid-friendly', 'sweet'],
     emoji: '🐻',
     imageGradient: ['#F4C46A', '#C8783A']
   },
@@ -433,6 +454,7 @@ export const snacks: Snack[] = [
       en: 'EU vegan certified, non-GMO, no artificial colors.'
     },
     allergens: ['gluten', 'soy'],
+    dietTags: ['vegan', 'sweet'],
     emoji: '🍪',
     imageGradient: ['#C4783A', '#5E2E10']
   },
@@ -452,6 +474,7 @@ export const snacks: Snack[] = [
       en: '100% Alpine milk, Cocoa Life certified.'
     },
     allergens: ['dairy', 'soy'],
+    dietTags: ['sweet'],
     emoji: '🐄',
     imageGradient: ['#A87AC4', '#4A2E6A']
   },
@@ -471,6 +494,7 @@ export const snacks: Snack[] = [
       en: 'Caffeine-free — and the marble pop is half the fun.'
     },
     allergens: [],
+    dietTags: ['kid-friendly', 'sweet'],
     emoji: '🥤',
     imageGradient: ['#7AC4E8', '#1A4A7A']
   },
@@ -490,6 +514,7 @@ export const snacks: Snack[] = [
       en: '100% natural mineral water, zero sugar & calories.'
     },
     allergens: [],
+    dietTags: ['diabetic-friendly', 'low-sugar', 'healthy', 'vegan'],
     emoji: '💧',
     imageGradient: ['#7AE8C4', '#1A6A4A']
   }

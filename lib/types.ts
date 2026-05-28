@@ -30,6 +30,8 @@ export type Party = 'solo' | 'duo' | 'group';
 
 export type Category = 'street-food';
 
+export type MenuSection = 'mandu' | 'mains' | 'rice-noodle-stew' | 'galbi-tangsuyuk';
+
 export type ConciergeTag =
   | DietTag
   | `mood:${Mood}`
@@ -39,6 +41,7 @@ export interface MenuItem {
   id: string;
   slug: string;
   category: Category;
+  section: MenuSection;
   name: LocalizedString;
   shortDesc: LocalizedString;
   longDesc?: LocalizedString;
